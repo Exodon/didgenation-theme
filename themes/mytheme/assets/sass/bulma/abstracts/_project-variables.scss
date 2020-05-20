@@ -1,0 +1,110 @@
+
+// ***************** VARIABLES ***************** //
+// Description:
+// General global variables used in the project
+// --------------------------------------------------
+
+//////////////////////////////////////////////////////Level 1 Variables///////////////////////////////////////////////////////////////
+
+// ==================================================
+// Font Family
+// ==================================================
+$montserrat: "Montserrat",sans-serif;
+$muli: "Muli",sans-serif;
+
+// ==================================================
+// Colors : Names from : http://chir.ag/projects/name-that-color
+// ==================================================
+// Project colors
+$white: #fff;
+$red: #bc0026;
+$black: #000;
+$gray: #eee;
+$green: #228b22;
+
+
+////////////////////////////////////////////////////// Level 2 Variables///////////////////////////////////////////////////////////////
+
+// ==================================================
+// Project Theme Color
+// ==================================================
+$brand-theme-active: $black;
+$brand-theme-passive: $gray;
+
+// ==================================================
+// Global Variables
+// ==================================================
+$global-easing: cubic-bezier(1, 0.04, 0.01, 1);
+$global-transition: all 0.2s ease-in-out;
+$global-error: $red;
+$global-successful: $green;
+$global-border: 1px solid $gray;
+$global-border-bold: 1px solid $black;
+$global-border-radius-component: 5px;
+$global-border-radius-circule: 50%;
+$global-circule-shadow: 1px 3px 63px -6px rgba(198, 191, 191, 0.3);
+$global-box-shadow-component: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$global-box-shadow-hover: 0px 3px 12px 0px rgba(0, 0, 0, 0.3);
+$global-component-background-light: $white;
+$global-component-background-mid: $gray;
+$global-component-background-dark: $black;
+$global-gutter: 20px;
+$global-padding: 40px;
+$global-padding-small: 20px;
+
+// ==================================================
+// Body
+// ==================================================
+$body-color: $white;
+$body-font-size: 14px;
+$body-font-size-xs: 10px;
+$body-font-size-s: 12px;
+$body-font-size-xl: 16px;
+$body-font-size-xxl: 18px;
+$body-font-family: $muli;
+$body-font-weight: 300;
+$body-font-weight-bold: 700;
+$body-font-color-dark: $black; 
+$body-font-color-mid: $gray;
+$body-font-color-light: $white;
+$body-line-height-xs: 16px;
+$body-line-height-s: 22px;
+$body-line-height-xl: 24px;
+$body-line-height-xxl: 28px;
+$body-paragraph-margin: 16px;
+
+// ==================================================
+// Title
+// ==================================================
+$title-font-family: $montserrat;
+$title-font-weight: 600;
+$title-font-weight-bold: 700;
+$title-font-size-xl: 32px;
+$title-font-size-s: 19px;
+$title-color: $brand-theme-active;
+$title-text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+
+// ==================================================
+// Icons
+// ==================================================
+$icon-color: $brand-theme-active;
+
+// ==================================================
+// components
+// ==================================================
+$component-max-width: 1300px;
+
+// ==================================================
+// Buttons
+// ==================================================
+$btn-border-color: $gray;
+$btn-border: 1px solid $btn-border-color;
+$btn-border-dark: 1px solid $brand-theme-passive;
+$btn-background: $brand-theme-active;
+$btn-hover: $brand-theme-passive;
+$btn-font-family: $body-font-family;
+$btn-font-size: 14px;
+$btn-font-weight: 600;
+$btn-small-padding: 2px 8px;
+$btn-normal-padding: 12px 8px;
+$btn-opacity-over: 0.7;

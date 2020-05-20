@@ -1,27 +1,8 @@
-// @import '/modules/system/assets/css/framework.extras.css' // Import framework extras CSS
+// ***************** PAGE HOME ***************** //
+// Description:
+// Generic style used specific for the Page home
+// --------------------------------------------------
 
-@charset "utf-8";
-
-@import '01-settings/_all';
-@import '02-tools/_all';
-@import '03-generic/_all';
-@import '04-elements/_all';
-@import '05-layout/_all';
-@import '06-pages/_all';
-@import '07-utility/_all';
-
-// Home
-// Block News Intro
-.layout-header {
-    //margin-bottom: 80px; // because of the navigation
-
-
-    .navbar {
-        border-bottom: $global-border;
-        max-width: 1280px;
-        margin: auto;
-    }
-}
 
 .block-articles {
     margin-top: 20px;
@@ -204,9 +185,4 @@
     color: #707070;
     min-width: 150px;
     text-align: center;
-}
-
-
-a {
-    color: green;
 }

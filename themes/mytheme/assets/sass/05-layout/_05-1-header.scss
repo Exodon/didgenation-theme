@@ -1,0 +1,13 @@
+// ***************** HEADER ***************** //
+// Description:
+// Generic style used for the header
+// --------------------------------------------------
+
+
+.layout-header {
+    .navbar {
+        border-bottom: $global-border;
+        max-width: 1280px;
+        margin: auto;
+    }
+}
