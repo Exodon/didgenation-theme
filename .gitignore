@@ -1,0 +1,15 @@
+/node_modules/
+/.git/
+/**/Thumbs.db
+/**/*.DS_Store
+/bootstrap
+/config
+/modules
+/plugins
+/storage
+/vendor
+/artisan
+/themes/demo
+/index.php
+/server.php
+/.htaccess
