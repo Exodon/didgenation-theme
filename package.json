@@ -1,5 +1,5 @@
 {
-  "name": "octobercms-gulp-starter",
+  "name": "DidgeNation October Theme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agragregra/OctoberCMS-Gulp-Starter.git"
+    "url": "https://github.com/Exodon/didgenation-theme"
   },
-  "author": "",
+  "author": "DidgeNation Crew",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/agragregra/OctoberCMS-Gulp-Starter/issues"
+    "url": "https://github.com/Exodon/didgenation-theme/issues"
   },
-  "homepage": "https://github.com/agragregra/OctoberCMS-Gulp-Starter#readme",
+  "homepage": "https://github.com/Exodon/didgenation-theme#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",

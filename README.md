@@ -1,7 +1,7 @@
 
 <h1>Didgenation Theme for October CMS</h1>
 
-<p>Lightweight optimized Gulp starter for October CMS theme development with Gulp 4, Browsersync, preprocessors (sass, scss, less, stylus), cleancss, uglify-es, autoprefixer, rsync and more. Initial setup was a fork from : https://github.com/agragregra/OctoberCMS-Gulp-Starter</p>
+<p>Lightweight optimized Gulp starter for October CMS theme development with Gulp 4, Browsersync, preprocessors (sass, scss, less, stylus), cleancss, uglify-es, autoprefixer, rsync and more. This Initial setup was a fork from : https://github.com/agragregra/OctoberCMS-Gulp-Starter and later was changed to adapt to this project</p>
 
 <p>
 	<img src="https://raw.githubusercontent.com/agragregra/agragregra.github.com/master/images/october-gulp-preview.jpg" alt="Optober Gulp">
@@ -9,7 +9,19 @@
 
 <h2>Installation</h2>
 
-<code>npm install</code> in the root directory of the cms ( Example : localhost://project)
+<p>Step 1- Clone the git repository into your project  (Example : localhost://project)</p>
+
+<p>Step 2- Open CMD as ADMINISTRATOR (very important) and install gulp globally</p>
+  <code>npm install --global gulp-cli</code>
+
+<p>Step 3- Via the CMD go into the root folder and write</p>
+  <code>npm install</code>
+
+<p>Step 4- Upload all the cartridges to the devbox via the command line (no eclipse needed)</p>
+  <code>gulp upload</code>
+
+<p>Step 5- To keep the project watch mode just write</p>
+  <code>gulp --watch</code>
 
 <h2>October CMS Theme Directory structure</h2>
 
@@ -62,3 +74,27 @@ themes/
 	<li><strong>deploy</strong> - deploy changes on server with gulp-rsync</li>
 	<li><strong>gulp</strong> - The default command to start the environment</li>
 </ul>
+
+<h2>Built With</h2>
+* [Node]((https://nodejs.org) - Core JS
+* [Gulp]((https://http://gulpjs.com) - Dependency Management
+* [SASS]((https://sass-lang.com) - SASS
+* [SASS]((https://octobercms.com/) - October CMS
+
+<h2>Versioning</h2>
+1.0.0 (Release date: 5/16/2017)
+
+About version please check [SemVer]((http://semver.org) for versioning.
+
+<h2>Credits</h2>
+* Project developed by DidgeNation Crew
+
+<h2>License</h2>
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+<h2>Acknowledgments</h2>
+* Chuck Norris methodology ( http://www.shino.de/2010/02/20/scrum-norris/ )
+* Didgeridoo rules
+
+<h2>Markdown</h2>
+[Markdown Styling codes]((https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
