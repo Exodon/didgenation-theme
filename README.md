@@ -1,6 +1,7 @@
-<h1>October CMS Gulp Starter</h1>
 
-<p>Lightweight optimized Gulp starter for October CMS theme development with Gulp 4, Browsersync, preprocessors (sass, scss, less, stylus), cleancss, uglify-es, autoprefixer, rsync and more.</p>
+<h1>Didgenation Theme for October CMS</h1>
+
+<p>Lightweight optimized Gulp starter for October CMS theme development with Gulp 4, Browsersync, preprocessors (sass, scss, less, stylus), cleancss, uglify-es, autoprefixer, rsync and more. Initial setup was a fork from : https://github.com/agragregra/OctoberCMS-Gulp-Starter</p>
 
 <p>
 	<img src="https://raw.githubusercontent.com/agragregra/agragregra.github.com/master/images/october-gulp-preview.jpg" alt="Optober Gulp">
@@ -8,9 +9,7 @@
 
 <h2>Installation</h2>
 
-<p>Run this in the root directory of you site <strong>with a dot</strong> at the end:</p>
-
-<code>git clone https://github.com/agragregra/OctoberCMS-Gulp-Starter .</code>
+<code>npm install</code> in the root directory of the cms ( Example : localhost://project)
 
 <h2>October CMS Theme Directory structure</h2>
 
