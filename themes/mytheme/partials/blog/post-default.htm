@@ -16,7 +16,7 @@
           <div class="content">
             {{ post.summary|truncate(100)|raw }}
             <div class="date">
-              <span class="published"><i class="icon icon-calendar"></i> {{ post.published_at|date('M d, Y') }}</span>
+              <span class="published"><i class="far fa-calendar-alt"></i> {{ post.published_at|date('M d, Y') }}</span>
               {# <span class="author"><i class="icon icon-user"></i> {{ post.author.full_name }}</span> #}
             </div>
             {% if post.categories.count %}
