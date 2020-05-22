@@ -1,0 +1,38 @@
+title = "Blog Category"
+url = "/blog/category/:slug/:page?"
+layout = "category"
+description = "Viewing blog posts in a specific category."
+hidden = "0"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = "0"
+categoryPage = "blog/category"
+
+==
+
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+          <h1 class="title">{{ category.name }}</h1>
+      </h1>
+      <h2 class="subtitle">
+        {{ category.description }}
+      </h2>
+    </div>
+  </div>
+</section>
+
+<div class="block-articles">
+  {% partial 'blog/posts' %}
+</div>

@@ -1,0 +1,25 @@
+description = "Default layout"
+useContent = 1
+default = 0
+==
+
+<meta charset="utf-8">
+<title>{{ this.page.title }} - {{ this.theme.site_name }}</title>
+<meta name="description" content="{{ this.page.meta_description }}">
+<meta name="title" content="{{ this.page.meta_title }}">
+<meta name="author" content="DidgeNation">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="DidgeNation">
+<link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+
+{# Temporary #}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+{# Style #}
+<link href="{{ 'assets/css/theme.min.css' | theme }}" rel="stylesheet">
+
+
+{# Google Font #}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700|Muli:300,700&display=swap">
+

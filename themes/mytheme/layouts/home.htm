@@ -1,0 +1,34 @@
+description = "Home Page Layout"
+==
+<!DOCTYPE html>
+
+<html lang="eng">
+    
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+    
+    <body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
+
+        <div>
+            
+            <!-- Header -->
+            <header class="layout-header">
+                {% partial 'site/header' %}
+            </header>
+
+            <!-- Content -->
+            <section class="container">
+              {% page %}
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                {% partial 'site/footer' %}
+            </footer>
+        </div>
+
+        <!-- Scripts -->
+        {% partial 'site/scripts' %}
+    </body>
+</html>

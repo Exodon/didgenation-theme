@@ -1,0 +1,89 @@
+
+// ***************** BUTTONS ***************** //
+// Description:
+// Generic style used for the buttons
+// --------------------------------------------------
+
+// Used Variables
+$btn-ns:                null !default;
+$btn-color:             #fff !default;
+$btn-color-bg:          #005639 !default;
+$btn-color-bg-hover:    lighten($btn-color-bg, 10%) !default;
+$btn-padding:           10px !default;
+$btn-margin:            5px !default;
+$btn-font-family:      sans-serif !default;
+
+$btn-custom: (
+) !default;
+
+
+/**
+ * Configurable button component. Can be applied to any HTML element necessary.
+ *
+ * 1. Reset all properties to browser default.
+ * 2. Allow us to style box model properties.
+ * 3. Line different sized buttons up a little nicer.
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+.#{$btn-ns}c-btn {
+    all: initial; /* [1] */
+    display: inline-block; /* [2] */
+    vertical-align: middle; /* [3] */
+    text-align: center; /* [4] */
+    text-decoration: none; /* [4] */
+    cursor: pointer; /* [5] */
+    padding: $btn-padding;
+    margin: $btn-margin;
+    color: $btn-color;
+    background-color: $btn-color-bg;
+    font-size: 12px;
+    font-family: $btn-font-family;
+
+    @each $property, $value in $btn-custom {
+        #{$property}: unquote($value);
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none; /* [4] */
+        background-color: $btn-color-bg-hover;
+    }
+
+    /**
+     * 1. Forbid interaction with buttons that are disabled.
+     */
+    &[disabled],
+    &.is-disabled {
+        opacity: 0.5;
+        pointer-events: none; /* [1] */
+    }
+
+}
+
+
+/**
+ * Provide size variants by halving or doubling the padding of the standard
+ * button.
+ */
+.#{$btn-ns}c-btn--small {
+    padding: round(0.5 * $btn-padding);
+}
+
+.#{$btn-ns}c-btn--large {
+    padding: round(2.0 * $btn-padding);
+}
+
+
+/**
+ * Create buttons that will fill the entire width of the container they’re
+ * placed inside.
+ *
+ * 1. Remove horizontal paddings so widths and paddings do not compound.
+ */
+.#{$btn-ns}c-btn--full {
+    padding-right: 0; /* [1] */
+    padding-left:  0; /* [1] */
+    width: 100%;
+}

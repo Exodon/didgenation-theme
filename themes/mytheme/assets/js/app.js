@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-	// Custom JS
+/**
+ * @function
+ * @description Swiper Home Page
+ */
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 1,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
 
 });
