@@ -1,0 +1,19 @@
+{% set image = post.featured_images.first %}
+<div class="column">
+  <article class="card">
+          <div class="image is-3by2" role="img" aria-label="{{ post.title }}" style="background-image:url({{ image.path }})">
+              <a href="{{ post.url }}">
+              </a>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              </div>
+            </div>
+            <div class="content">
+              {{ post.summary|truncate(100)|raw }}
+            </div>
+          </div>
+  </article>
+</div>

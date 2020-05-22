@@ -1,0 +1,19 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "cat-b"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<div class="block-articles is-intro">
+  <div class="title-holder">
+    <span class="title-holder-definition">News</span>
+  </div>
+  <div class="columns">
+    {% for post in posts %}
+      {% partial 'blog/post-cat-news' post=post %}
+    {% endfor %}
+  </div>
+</div>

@@ -9,11 +9,9 @@ description = "Home Page Layout"
     </head>
     
     <body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
-
-        <div>
             
             <!-- Header -->
-            <header class="layout-header">
+            <header class="header">
                 {% partial 'site/header' %}
             </header>
 
@@ -26,7 +24,7 @@ description = "Home Page Layout"
             <footer class="footer">
                 {% partial 'site/footer' %}
             </footer>
-        </div>
+
 
         <!-- Scripts -->
         {% partial 'site/scripts' %}

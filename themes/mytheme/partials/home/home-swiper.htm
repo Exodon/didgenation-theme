@@ -1,0 +1,26 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "cat-d"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<div class="block-articles is-swiper">
+  <div class="title-holder">
+    <span class="title-holder-definition">Fresh News</span>
+  </div>
+<!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        {% for post in posts %}
+        <div class="swiper-slide">
+          {% partial 'blog/post-cat-swiper' post=post %}
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>

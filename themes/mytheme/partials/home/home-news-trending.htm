@@ -1,0 +1,18 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<div class="block-articles is-trending">
+  <div class="title-holder">
+    <span class="title-holder-definition">Trending</span>
+  </div>
+  <div class="columns">
+    {% for post in posts %}
+      {% partial 'blog/post-cat-trending' post=post %}
+    {% endfor %}
+  </div>
+</div>
