@@ -25,15 +25,23 @@ function onEnd()
 {% set nextPost = blogPost.nextPost %}
 {% set lastPost = blogPost.previousPost %}
 
-<div class="post-single">
-    <article>
-        {% if image %}
-            <div class="post-image">
+<section class="section">
+    <div class="container">
+        <span class="tag">{{ post.published_at|date('M d, Y') }}</span>
+        <h1 class="title">{{ post.title }} <small></small></h1>
+        <div class="intro">
+            {{ post.summary }}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <article class="container">
+        
+        <header class="post-image">
+            {% if image %}
                 <img src="{{ image.path }}" alt="{{ post.title }}" />
-            </div>
-        {% endif %}
-        <header class="post-title">
-            <h1>{{ post.title }}</h1>
+            {% endif %}
         </header>
 
         <div class="post-content">
@@ -41,30 +49,34 @@ function onEnd()
         </div>
 
         <footer>
-            <span class="published"><i class="far fa-calendar-alt"></i> {{ post.published_at|date('M d, Y') }}</span>
+            <span class="tag">{{ post.published_at|date('M d, Y') }}</span>
             {# <span class="author"><i class="icon icon-user"></i> {{ post.author.full_name }}</span> #}
             {% if post.categories.count %} in
-                <span class="category">
-                    <i class="icon icon-folder-open"></i>
-                    {% for category in post.categories %}
-                        <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-                    {% endfor %}
-                </span>
+            <span class="category">
+                {% for category in post.categories %}
+                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </span>
             {% endif %}
         </footer>
-    </article>
-    <nav class="post-links">
-        {% if lastPost %}
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <nav class="post-links">
+            {% if lastPost %}
             <a href="{{ lastPost.url }}" class="link-previous">
                 <p>Previous</p>
                 <span>{{ lastPost.title }}</span>
             </a>
-        {% endif %}
-        {% if nextPost %}
+            {% endif %}
+            {% if nextPost %}
             <a href="{{ nextPost.url }}" class="link-next">
                 <p>Next</p>
                 <span>{{ nextPost.title }}</span>
             </a>
-        {% endif %}
-    </nav>
-</div>
+            {% endif %}
+        </nav>
+    </div>
+</section>

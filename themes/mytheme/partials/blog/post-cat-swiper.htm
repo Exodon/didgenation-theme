@@ -12,7 +12,7 @@
               </div>
             </div>
             <div class="content">
-              {{ post.summary|truncate(100)|raw }}
+              {{ str_limit(post.summary|striptags|raw, 100) }}
             </div>
           </div>
   </article>

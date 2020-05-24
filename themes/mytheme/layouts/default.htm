@@ -1,7 +1,33 @@
-{% partial 'site/header' %}
+description = "Default"
+==
+<!DOCTYPE html>
 
-	<section>
+<html lang="eng">
+
+<head>
+	{% partial 'site/meta' %}
+</head>
+
+<body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
+
+	<!-- Header -->
+	<header class="header">
+		{% partial 'site/header' %}
+	</header>
+
+	<!-- Content -->
+	<section class="container">
 		{% page %}
 	</section>
 
-{% partial 'site/footer' %}
+	<!-- Footer -->
+	<footer class="footer">
+		{% partial 'site/footer' %}
+	</footer>
+
+
+	<!-- Scripts -->
+	{% partial 'site/scripts' %}
+</body>
+
+</html>
