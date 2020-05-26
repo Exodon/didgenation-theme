@@ -25,45 +25,42 @@ function onEnd()
 {% set nextPost = blogPost.nextPost %}
 {% set lastPost = blogPost.previousPost %}
 
-<section class="section">
-    <div class="content">
-        <span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-        <h1 class="title">{{ post.title }}<small></small></h1>
-        <div class="intro">
-            {{ post.excerpt|raw }}
-        </div>
-    </div>
-</section>
 
-<section class="section">
-    <article>
-        <header class="post-image">
-			{% if image %}
-				<figure class="image is-16by9">
-					<img src="{{ image.path }}" alt="{{ post.title }}" />
-				</figure>
-            {% endif %}
-        </header>
+<div class="content">
+	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
+	<h1 class="title">{{ post.title }}<small></small></h1>
+	<div class="intro">
+		{{ post.excerpt|raw }}
+	</div>
+</div>
 
-        <div class="content">
-            {{ post.content_html|raw }}
-        </div>
+<article>
+	<header class="post-image">
+		{% if image %}
+			<figure class="image is-16by9">
+				<img src="{{ image.path }}" alt="{{ post.title }}" />
+			</figure>
+		{% endif %}
+	</header>
 
-        <footer>
-            <span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-            {# <span class="author"><i class="icon icon-user"></i> {{ post.author.full_name }}</span> #}
-            {% if post.categories.count %} in
-            <span class="category">
-                {% for category in post.categories %}
-                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-                {% endfor %}
-            </span>
-            {% endif %}
-        </footer>
-    </div>
-</section>
+	<div class="content">
+		{{ post.content_html|raw }}
+	</div>
 
-<section class="section">
+	<footer>
+		<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
+		{# <span class="author"><i class="icon icon-user"></i> {{ post.author.full_name }}</span> #}
+		{% if post.categories.count %} in
+		<span class="category">
+			{% for category in post.categories %}
+			<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+			{% endfor %}
+		</span>
+		{% endif %}
+	</footer>
+</article>
+
+<div class="content">
     <div class="container">
         <nav class="post-links">
             {% if lastPost %}
@@ -80,4 +77,4 @@ function onEnd()
             {% endif %}
         </nav>
     </div>
-</section>
+</div>
