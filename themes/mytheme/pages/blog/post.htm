@@ -65,7 +65,7 @@ function onEnd()
 
 <!-- Author Section -->
 <div class="block-author">
-	<h3 class="subtitle is-3">Article Written by</h3>
+	<h3 class="subtitle is-3">Article written by</h3>
 	<article class="media">
 		<figure class="image is-128x128">
 			<img class="is-rounded" src="{{ post.user.getAvatarThumb(128) }}" >
@@ -76,6 +76,7 @@ function onEnd()
 				<p>
 					<strong>{{ post.user.first_name }} {{ post.user.last_name }}</strong>
 					<br>
+					{{ post.user.getDescription }}
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor
 					vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
 				</p>
@@ -100,27 +101,21 @@ function onEnd()
 	</article>
 </div>
 
-
-<div class="content">
-
-</div>
-
 <!-- Next / Previous Post Navigation -->
-<div class="content">
-    <div class="container">
-        <nav class="post-links">
-            {% if lastPost %}
-            <a href="{{ lastPost.url }}" class="link-previous">
-                <p>Previous</p>
-                <span>{{ lastPost.title }}</span>
-            </a>
-            {% endif %}
-            {% if nextPost %}
-            <a href="{{ nextPost.url }}" class="link-next">
-                <p>Next</p>
-                <span>{{ nextPost.title }}</span>
-            </a>
-            {% endif %}
-        </nav>
-    </div>
+<div class="block-post-navigation">
+	<h3 class="subtitle is-3 has-text-centered">Don´t forget to check other articles</h3>
+
+	<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+		{% if lastPost %}
+		<a class="pagination-previous" href="{{ lastPost.url }}">
+			{{ lastPost.title }}
+		</a>
+		{% endif %}
+		{% if nextPost %}
+		<a class="pagination-next" href="{{ nextPost.url }}">
+			{{ nextPost.title }}
+		</a>
+		{% endif %}
+	</nav>
 </div>
