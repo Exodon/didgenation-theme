@@ -25,7 +25,7 @@ function onEnd()
 {% set nextPost = blogPost.nextPost %}
 {% set lastPost = blogPost.previousPost %}
 
-
+<!-- Excerpt Post Section -->
 <div class="content">
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
 	<h1 class="title">{{ post.title }}<small></small></h1>
@@ -34,10 +34,12 @@ function onEnd()
 	</div>
 </div>
 
-<article>
+<!-- Beginning of the Post -->
+
+<article class="content">
 	<header class="post-image">
 		{% if image %}
-			<figure class="image is-16by9">
+			<figure class="image is-3by1">
 				<img src="{{ image.path }}" alt="{{ post.title }}" />
 			</figure>
 		{% endif %}
@@ -60,6 +62,50 @@ function onEnd()
 	</footer>
 </article>
 
+
+<!-- Author Section -->
+<div class="block-author">
+	<h3 class="subtitle is-3">Article Written by</h3>
+	<article class="media">
+		<figure class="image is-128x128">
+			<img class="is-rounded" src="{{ post.user.getAvatarThumb(128) }}" >
+		</figure>
+
+		<div class="media-content">
+			<div class="content">
+				<p>
+					<strong>{{ post.user.first_name }} {{ post.user.last_name }}</strong>
+					<br>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor
+					vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+				</p>
+			</div>
+			<nav class="level is-mobile">
+				<div class="level-left">
+					<a class="level-item">
+						<span class="icon is-small"><i class="fas fa-envelope"></i></span>
+					</a>
+					<a class="level-item">
+						<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+					</a>
+					<a class="level-item">
+						<span class="icon is-small"><i class="fab fa-twitter"></i></i></span>
+					</a>
+					<a class="level-item">
+						<span class="icon is-small"><i class="fab fa-instagram"></i></i></span>
+					</a>
+				</div>
+			</nav>
+		</div>
+	</article>
+</div>
+
+
+<div class="content">
+
+</div>
+
+<!-- Next / Previous Post Navigation -->
 <div class="content">
     <div class="container">
         <nav class="post-links">

@@ -1,0 +1,14 @@
+// ***************** AUTHOR ***************** //
+// Description:
+// Generic style used for the AUTHOR SECTION
+// --------------------------------------------------
+
+.block-author {
+	margin-top: 40px;
+	border: $global-border;
+	padding: $global-padding;
+
+	.image {
+		margin-right: 20px;
+	}
+}
