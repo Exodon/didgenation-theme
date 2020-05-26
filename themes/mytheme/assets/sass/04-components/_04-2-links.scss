@@ -1,0 +1,16 @@
+// ***************** LINKS ***************** //
+// Description:
+// Generic style used for links
+// --------------------------------------------------
+
+// Used Variables
+$link-color: #000 !default;
+$link-color-hover: lighten($link-color, 40%) !default;
+
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-color-hover;
+    }
+}

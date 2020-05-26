@@ -1,31 +1,31 @@
 
-<h1>Didgenation Theme for October CMS</h1>
+#Didgenation Theme for October CMS
 
-<p>Lightweight optimized Gulp starter for October CMS theme development with Gulp 4, Browsersync, preprocessors (sass, scss, less, stylus), cleancss, uglify-es, autoprefixer, rsync and more. This Initial setup was a fork from : https://github.com/agragregra/OctoberCMS-Gulp-Starter and later was changed to adapt to this project</p>
+Lightweight optimized Gulp starter for October CMS theme development with Gulp 4, Browsersync, preprocessors (sass, scss, less, stylus), cleancss, uglify-es, autoprefixer, rsync and more. This Initial setup was a fork from : https://github.com/agragregra/OctoberCMS-Gulp-Starter and later was changed to adapt to this project
 
-<p>
-	<img src="https://raw.githubusercontent.com/agragregra/agragregra.github.com/master/images/october-gulp-preview.jpg" alt="Optober Gulp">
-</p>
+##Installation
 
-<h2>Installation</h2>
+Step 1- Clone the git repository into your project  (Example : localhost://project)
 
-<p>Step 1- Clone the git repository into your project  (Example : localhost://project)</p>
+Step 2- Open CMD as ADMINISTRATOR (very important) and install gulp globally
 
-<p>Step 2- Open CMD as ADMINISTRATOR (very important) and install gulp globally</p>
-  <code>npm install --global gulp-cli</code>
+<code>npm install --global gulp-cli</code>
 
-<p>Step 3- Via the CMD go into the root folder and write</p>
-  <code>npm install</code>
+Step 3- Via the CMD go into the root folder and write
 
-<p>Step 4- Upload all the cartridges to the devbox via the command line (no eclipse needed)</p>
-  <code>gulp upload</code>
+<code>npm install</code>
 
-<p>Step 5- To keep the project watch mode just write</p>
-  <code>gulp --watch</code>
+Step 4- Upload all the cartridges to the devbox via the command line (no eclipse needed)
 
-<h2>October CMS Theme Directory structure</h2>
+<code>gulp upload</code>
 
-<p>Recommends using the following base directory structure for you theme:</p>
+Step 5- To keep the project watch mode just write
+
+<code>gulp --watch</code>
+
+##October CMS Theme Directory structure
+
+Recommends using the following base directory structure for you theme:
 
 <pre>
 themes/
@@ -52,7 +52,7 @@ themes/
 — — theme.yaml
 </pre>
 
-<h2>Starter Features & Variables in gulpfile.js</h2>
+##Starter Features & Variables in gulpfile.js
 
 <ol>
 	<li><strong>Make proxy for live development with Browsersync</strong> - <code>let localhost</code></li>
@@ -64,7 +64,7 @@ themes/
 	<li><strong>Better deploy with rsync</strong> - <code>gulp-rsync</code></li>
 </ol>
 
-<h2>Exported Gulp Task</h2>
+##Exported Gulp Task
 
 <ul>
 	<li><strong>browsersync</strong></li>
@@ -75,26 +75,26 @@ themes/
 	<li><strong>gulp</strong> - The default command to start the environment</li>
 </ul>
 
-<h2>Built With</h2>
-* [Node]((https://nodejs.org) - Core JS
-* [Gulp]((https://http://gulpjs.com) - Dependency Management
-* [SASS]((https://sass-lang.com) - SASS
-* [SASS]((https://octobercms.com/) - October CMS
+##Built With
+* [Node](https://nodejs.org) - Core JS
+* [Gulp](https://http://gulpjs.com) - Dependency Management
+* [SASS](https://sass-lang.com) - SASS
+* [SASS](https://octobercms.com/) - October CMS
 
-<h2>Versioning</h2>
+##Versioning
 1.0.0 (Release date: 5/16/2017)
 
-About version please check [SemVer]((http://semver.org) for versioning.
+About version please check [SemVer](http://semver.org) for versioning.
 
-<h2>Credits</h2>
+##Credits
 * Project developed by DidgeNation Crew
 
-<h2>License</h2>
+##License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-<h2>Acknowledgments</h2>
-* Chuck Norris methodology ( http://www.shino.de/2010/02/20/scrum-norris/ )
+##Acknowledgments
+* Chuck Norris [methodology](http://www.shino.de/2010/02/20/scrum-norris)
 * Didgeridoo rules
 
-<h2>Markdown</h2>
-[Markdown Styling codes]((https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+##Markdown
+Markdown [Styling codes](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

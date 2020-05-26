@@ -1,0 +1,15 @@
+// ***************** PAGE CATEGORY ***************** //
+// Description:
+// Generic style used specific for the Page Category
+// --------------------------------------------------
+
+
+// Remove the category label
+.page-category {
+    
+    .block-articles {
+        .category-holder {
+            display: none;
+        }
+    }
+}

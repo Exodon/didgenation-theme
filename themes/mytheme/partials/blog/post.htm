@@ -16,18 +16,18 @@
             </div>
             <div class="content">
               {{ post.summary|truncate(100)|raw }}
-              <div class="date">
-                <span class="published"><i class="far fa-calendar-alt"></i> {{ post.published_at|date('M d, Y') }}</span>
-                {# <span class="author"><i class="icon icon-user"></i> {{ post.author.full_name }}</span> #}
-              </div>
-              {% if post.categories.count %}
-              <div class="category-holder">
-                {% for category in post.categories %}
-                <a class="category-holder-title" href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
-                {% endfor %}
-              </div>
-              {% endif %}
             </div>
+            <div class="date">
+              <span class="published"><i class="far fa-calendar-alt"></i> {{ post.published_at|date('M d, Y') }}</span>
+              {# <span class="author"><i class="far fa-grin-tongue-wink"></i> {{ post.author.full_name }}</span> #}
+            </div>
+            {% if post.categories.count %}
+            <div class="category-holder">
+              {% for category in post.categories %}
+              <a class="category-holder-title" href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
           </div>
   </article>
 </div>

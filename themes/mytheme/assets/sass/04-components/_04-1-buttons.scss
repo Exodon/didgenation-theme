@@ -26,7 +26,7 @@ $btn-custom: (
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  */
-.#{$btn-ns}c-btn {
+.#{$btn-ns}btn {
     all: initial; /* [1] */
     display: inline-block; /* [2] */
     vertical-align: middle; /* [3] */
@@ -64,14 +64,15 @@ $btn-custom: (
 
 
 /**
+/**
  * Provide size variants by halving or doubling the padding of the standard
  * button.
  */
-.#{$btn-ns}c-btn--small {
+.#{$btn-ns}btn--small {
     padding: round(0.5 * $btn-padding);
 }
 
-.#{$btn-ns}c-btn--large {
+.#{$btn-ns}btn--large {
     padding: round(2.0 * $btn-padding);
 }
 
@@ -82,7 +83,7 @@ $btn-custom: (
  *
  * 1. Remove horizontal paddings so widths and paddings do not compound.
  */
-.#{$btn-ns}c-btn--full {
+.#{$btn-ns}btn--full {
     padding-right: 0; /* [1] */
     padding-left:  0; /* [1] */
     width: 100%;
