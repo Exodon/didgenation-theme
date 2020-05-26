@@ -5,10 +5,12 @@
 
 
 // Remove the category label
-.is_blog-category {
-  .block-articles {
-    .category-holder {
-      display: none;
-    }
-  }
+.is_blog-post {
+
+  .post-image {
+		margin-bottom: 20px;
+		img {
+			object-fit: cover;
+		}
+	}
 }

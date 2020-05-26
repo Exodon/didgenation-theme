@@ -30,17 +30,18 @@ function onEnd()
         <span class="tag">{{ post.published_at|date('M d, Y') }}</span>
         <h1 class="title">{{ post.title }}<small></small></h1>
         <div class="intro">
-            {{ post.summary }}
+            {{ post.excerpt|raw }}
         </div>
     </div>
 </section>
 
 <section class="section">
-    <article class="container">
-
+    <article>
         <header class="post-image">
-            {% if image %}
-                <img src="{{ image.path }}" alt="{{ post.title }}" />
+			{% if image %}
+				<figure class="image is-16by9">
+					<img src="{{ image.path }}" alt="{{ post.title }}" />
+				</figure>
             {% endif %}
         </header>
 

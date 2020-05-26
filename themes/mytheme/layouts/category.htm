@@ -5,7 +5,7 @@ description = "Default layout"
     <head>
         {% partial 'site/meta' %}
     </head>
-    <body class="page-category">
+	<body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
 
         <div>
             <!-- Header -->
