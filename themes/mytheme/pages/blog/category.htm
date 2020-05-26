@@ -19,14 +19,26 @@ displayEmpty = "0"
 categoryPage = "blog/category"
 ==
 
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+        $this->page->title = $this->category->name;
+}
+==
 <section class="hero is-medium is-primary is-bold">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title">{{ category.name }}</h1>
-      <h2 class="subtitle">{{ category.description }}</h2>
+      {% if not category %}
+        <h2>Category not found</h2>
+      {% else %}
+        <h1 class="title">{{ category.name }}</h1>
+        <h2 class="subtitle">{{ category.description | raw }}</h2>
+      {% endif %}
     </div>
   </div>
 </section>
+
 <div class="block-articles">
   {% partial 'blog/posts' %}
 </div>
