@@ -1,0 +1,43 @@
+description = "Post Page Layout"
+==
+<!DOCTYPE html>
+
+<html lang="eng">
+
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+
+    <body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
+
+            <!-- Header -->
+            <header class="header">
+                {% partial 'site/header' %}
+            </header>
+
+			<div class="container">
+				<div class="columns">
+					<!-- Content -->
+					<section class="column">
+					{% page %}
+					</section>
+
+					<!-- Sidebar -->
+					<aside class="column is-one-third sidebar">
+						<article id="widget_1" class="widget">...</article>
+						<article id="widget_2" class="widget">...</article>
+						<article id="widget_3" class="widget">...</article>
+					</aside>
+				</div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                {% partial 'site/footer' %}
+            </footer>
+
+
+        <!-- Scripts -->
+        {% partial 'site/scripts' %}
+    </body>
+</html>

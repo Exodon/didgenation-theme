@@ -8,9 +8,15 @@
 .is_blog-post {
 
   .post-image {
-		margin-bottom: 20px;
-		img {
-			object-fit: cover;
-		}
-	}
+    margin-bottom: 20px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .sidebar {
+    background-color: $gray;
+    flex: 0 0 30%;
+  }
 }
