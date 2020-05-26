@@ -3,7 +3,7 @@
 
 Lightweight optimized Gulp starter for October CMS theme development with Gulp 4, Browsersync, preprocessors (sass, scss, less, stylus), cleancss, uglify-es, autoprefixer, rsync and more. This Initial setup was a fork from : https://github.com/agragregra/OctoberCMS-Gulp-Starter and later was changed to adapt to this project
 
-Installation
+## Installation
 
 * Step 1- Clone the git repository into your project  (Example : localhost://project)
 
