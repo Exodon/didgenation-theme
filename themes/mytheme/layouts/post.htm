@@ -1,4 +1,17 @@
 description = "Post Page Layout"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[postsWithTag]
+tag = "{{ :tag }}"
+orderBy = "published_at asc"
+page = "{{ :page }}"
+resultsPerPage = 10
+postPage = "blog/post"
+categoryPage = "blog/category"
 ==
 <!DOCTYPE html>
 
@@ -18,14 +31,14 @@ description = "Post Page Layout"
 			<div class="container">
 				<div class="columns">
 					<!-- Content -->
-					<section class="column">
+					<section class="column is-9">
 					{% page %}
 					</section>
 
 					<!-- Sidebar -->
-					<aside class="column is-one-third sidebar">
-						<article id="widget_1" class="widget">...</article>
-						<article id="widget_2" class="widget">...</article>
+					<aside class="column is-3 sidebar">
+						<article id="widget_1" class="widget">{% component 'blogCategories' %}</article>
+						<article id="widget_2" class="widget">{% component 'postsWithTag' %}</article>
 						<article id="widget_3" class="widget">...</article>
 					</aside>
 				</div>

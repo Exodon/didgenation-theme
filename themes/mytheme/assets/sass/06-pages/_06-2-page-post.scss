@@ -7,6 +7,11 @@
 // Remove the category label
 .is_blog-post {
 
+	figure {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
   .post-image {
     margin-bottom: 20px;
 
@@ -17,6 +22,5 @@
 
   .sidebar {
     background-color: $gray;
-    flex: 0 0 30%;
   }
 }
