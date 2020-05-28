@@ -7,10 +7,10 @@
 // Remove the category label
 .is_blog-post {
 
-	figure {
-		margin-left: 0;
-		margin-right: 0;
-	}
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   .post-image {
     margin-bottom: 20px;
@@ -22,5 +22,77 @@
 
   .sidebar {
     background-color: $gray;
+  }
+
+  // Title
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .content {
+    p {
+      line-height: 30px;
+
+      &::first-letter {
+
+        float: left;
+        line-height: 40px;
+        font-family: serif;
+        font-size: 40px;
+        color: #e2ae7f;
+        font-weight: 400;
+        margin: 0 10px 0 10px;
+      }
+    }
+  }
+
+  // Blog Intro
+  .intro {
+    padding-bottom: 20px;
+		line-height: 35px;
+
+    &::first-letter {
+      position: relative;
+      vertical-align: top;
+      float: left;
+      line-height: 70px;
+      font-family: serif;
+      font-size: 80px;
+      color: #e2ae7f;
+      font-weight: 700;
+      margin: 10px 10px 0 10px;
+    }
+  }
+
+  // Blog Quote
+  blockquote {
+    quotes: "\201C""\201D""\2018""\2019";
+    font-family: serif;
+    line-height: 40px;
+    max-width: 80%;
+    margin: 30px auto;
+    font-size: 1.5em;
+  }
+
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote:after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  blockquote p {
+    display: inline;
   }
 }

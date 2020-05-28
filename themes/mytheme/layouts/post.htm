@@ -5,10 +5,11 @@ slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "blog/category"
 
-[tagList]
-orderBy = "name asc"
+[relatedPosts]
+slug = "{{ :slug }}"
 limit = 0
-enableTagFilter = "never"
+orderBy = "published_at asc"
+postPage = "blog/post"
 ==
 <!DOCTYPE html>
 
@@ -36,7 +37,7 @@ enableTagFilter = "never"
 					<aside class="column is-3 sidebar">
 						<article id="widget_1" class="widget">{% component 'blogCategories' %}</article>
 						<article id="widget_2" class="widget"></article>
-						<article id="widget_3" class="widget">...</article>
+						<article id="widget_3" class="widget">...</article>{% component 'relatedPosts' %}
 					</aside>
 				</div>
             </div>
