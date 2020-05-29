@@ -10,19 +10,19 @@
  */
 
 .u-display-none {
-    display: none !important;
+  display: none !important;
 }
 
 .u-display-block {
-    display: block !important;
+  display: block !important;
 }
 
 .u-display-inline-block {
-    display: inline-block !important;
+  display: inline-block !important;
 }
 
 .u-display-flex {
-    display: flex !important;
+  display: flex !important;
 }
 
 
@@ -32,9 +32,34 @@
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 .u-hide-visually {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    overflow: hidden !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+
+.is-cover {
+  img {
+    object-fit: cover;
+  }
+
+  &.as-top {
+    img {
+      object-position: top;
+    }
+  }
+
+  &.as-center {
+    img {
+      object-position: center;
+    }
+  }
+
+  &.as-bottom {
+    img {
+      object-position: bottom;
+    }
+  }
 }

@@ -1,15 +1,4 @@
 description = "Post Page Layout"
-
-[blogCategories]
-slug = "{{ :slug }}"
-displayEmpty = 0
-categoryPage = "blog/category"
-
-[relatedPosts]
-slug = "{{ :slug }}"
-limit = 0
-orderBy = "published_at asc"
-postPage = "blog/post"
 ==
 <!DOCTYPE html>
 
@@ -29,15 +18,15 @@ postPage = "blog/post"
 			<div class="container">
 				<div class="columns">
 					<!-- Content -->
-					<section class="column is-9">
+					<section class="column is-9"> 
 					{% page %}
 					</section>
 
 					<!-- Sidebar -->
 					<aside class="column is-3 sidebar">
-						<article id="widget_1" class="widget">{% component 'blogCategories' %}</article>
+						<article id="widget_1" class="widget"></article>
 						<article id="widget_2" class="widget"></article>
-						<article id="widget_3" class="widget">...</article>{% component 'relatedPosts' %}
+						<article id="widget_3" class="widget">...</article>  
 					</aside>
 				</div>
             </div>
