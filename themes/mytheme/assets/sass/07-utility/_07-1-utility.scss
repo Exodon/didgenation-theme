@@ -42,20 +42,34 @@
  * General helper classes for image control
  */
 
-.is-cover {
+.is-img-cover {
   img {
     object-fit: cover;
   }
 }
 
-.is-contain {
+.is-img-contain {
   img {
     object-fit: contain;
   }
 }
 
-.is-cover,
-.is-contain {
+.is-img-fill {
+  img {
+    object-fit: fill;
+  }
+}
+
+.is-img-scale {
+  img {
+    object-fit: scale-down;
+  }
+}
+
+.is-img-cover,
+.is-img-contain,
+.is-img-scale,
+.is-img-fill {
 
   &.as-top {
     img {
