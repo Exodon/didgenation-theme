@@ -6,7 +6,6 @@
 
 /**
  * General helper classes for controlling display
- *
  */
 
 .u-display-none {
@@ -39,11 +38,24 @@
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
+/**
+ * General helper classes for image control
+ */
 
 .is-cover {
   img {
     object-fit: cover;
   }
+}
+
+.is-contain {
+  img {
+    object-fit: contain;
+  }
+}
+
+.is-cover,
+.is-contain {
 
   &.as-top {
     img {
@@ -65,13 +77,13 @@
 
   &.as-left {
     img {
-      object-position: bottom;
+      object-position: left;
     }
   }
 
   &.as-right {
     img {
-      object-position: bottom;
+      object-position: right;
     }
   }
 }
