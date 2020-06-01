@@ -39,6 +39,24 @@
 }
 
 /**
+ * First letter style
+ */
+
+.u-first-letter {
+  line-height: 30px;
+
+  &::first-letter {
+    float: left;
+    line-height: 40px;
+    font-family: serif;
+    font-size: 40px;
+    color: #e2ae7f;
+    font-weight: 400;
+    margin: 0 10px 0 10px;
+  }
+}
+
+/**
  * General helper classes for image control
  */
 
