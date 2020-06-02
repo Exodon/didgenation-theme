@@ -1,0 +1,38 @@
+// ***************** 	Blockquote ***************** //
+// Description:
+// Generic style used for blockquote
+// --------------------------------------------------
+
+blockquote {
+  quotes: "\201C""\201D""\2018""\2019";
+  font-family: serif;
+  line-height: 40px;
+  max-width: 80%;
+  margin: 30px auto;
+	font-size: 1.5em;
+	border-left: 0 !important; // reset bulma
+}
+
+blockquote:before,
+blockquote:after {
+  color: $gray;
+  font-size: 4em;
+  line-height: 0.1em;
+}
+
+blockquote:before {
+  content: open-quote;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+
+}
+
+blockquote:after {
+	content: close-quote;
+	vertical-align: -0.5em;
+  margin-left: 0.25em;
+}
+
+blockquote p {
+  display: inline;
+}

@@ -1,4 +1,3 @@
-
 // ***************** VARIABLES ***************** //
 // Description:
 // General global variables used in the project
@@ -9,18 +8,21 @@
 // ==================================================
 // Font Family
 // ==================================================
-$montserrat: "Montserrat",sans-serif;
-$muli: "Muli",sans-serif;
+$montserrat: "Montserrat",
+sans-serif;
+$muli: "Muli",
+sans-serif;
 
 // ==================================================
 // Colors : Names from : http://chir.ag/projects/name-that-color
 // ==================================================
-// Project colors
 $white: #fff;
 $red: #bc0026;
 $black: #000;
-$gray: #eee;
 $green: #228b22;
+$gray-light: #dbdbdb;
+$gray: #b5b5b5;
+$gray-dark: #7a7a7a;
 
 
 ////////////////////////////////////////////////////// Level 2 Variables///////////////////////////////////////////////////////////////
@@ -64,7 +66,7 @@ $body-font-size-xxl: 18px;
 $body-font-family: $muli;
 $body-font-weight: 300;
 $body-font-weight-bold: 700;
-$body-font-color-dark: $black; 
+$body-font-color-dark: $black;
 $body-font-color-mid: $gray;
 $body-font-color-light: $white;
 $body-line-height-xs: 16px;

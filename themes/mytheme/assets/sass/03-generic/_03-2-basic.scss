@@ -1,0 +1,12 @@
+// ***************** BASIC ***************** //
+// Description:
+// Basic style for handy elements used in project
+// --------------------------------------------------
+
+// ==================================================
+// When the user select the text with mouse
+// ==================================================
+::selection {
+  background-color: $gray-dark;
+  color: $body-font-color-light;
+}
