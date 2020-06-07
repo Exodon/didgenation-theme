@@ -1,6 +1,6 @@
 // VARIABLES & PATHS
 
-let localhost    = 'http://localhost:88/experiment', // Local domain
+let localhost    = 'http://localhost:88/dn-project', // Local domain, can change dependent on your private instalation
     preprocessor = 'sass', // Preprocessor (sass, scss, less, styl) / Preprocessor folder name / Module require const name. Example: themes/mytheme/assets/scss/
     theme        = 'mytheme', // Theme folder name
     fileswatch   = 'html,htm,php,txt,yaml,twig,json,md', // List of files extensions for watching & hard reload (comma separated)
@@ -10,7 +10,7 @@ let paths = {
 
 	scripts: {
 		src: [
-			// 'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+			'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
 			// 'themes/' + theme + '/assets/vendor/lazyload/lazyload.js', // Vendor script plugin example
 			// 'modules/system/assets/js/framework.js', // {% framework extras %}
 			// 'modules/system/assets/js/framework.extras.js', // {% framework extras %}
