@@ -2,6 +2,40 @@
 // Description:
 // Generic style used for the header
 // --------------------------------------------------
+
+// ==================================================
+// Standard Header
+// ==================================================
 .header {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+// ==================================================
+// Profile Page Header
+// ==================================================
+
+.header.is-profile {
+  margin-bottom: 0;
+  background-image: url("../images/bg/bg-8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  .card {
+		margin: 40px auto;
+		max-width: 500px;
+		background-color: $global-component-background-light;
+		padding: $global-gutter;
+		border-radius: $global-border-radius-component;
+
+		figure {
+			display: inline-block;
+			padding-bottom: 20px;
+		}
+
+		img {
+			padding: 5px;
+			border: 1px solid $gray;
+		}
+	}
 }

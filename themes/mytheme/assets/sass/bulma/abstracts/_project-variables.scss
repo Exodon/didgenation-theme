@@ -48,9 +48,8 @@ $global-box-shadow-hover: 0px 3px 12px 0px rgba(0, 0, 0, 0.3);
 $global-component-background-light: $white;
 $global-component-background-mid: $gray;
 $global-component-background-dark: $black;
-$global-gutter: 20px;
-$global-padding: 40px;
-$global-padding-small: 20px;
+$global-gutter: 40px;
+$global-gutter-small: 20px;
 
 // ==================================================
 // Body
@@ -64,7 +63,7 @@ $body-font-size-xxl: 18px;
 $body-font-family: $muli;
 $body-font-weight: 300;
 $body-font-weight-bold: 700;
-$body-font-color-dark: $black; 
+$body-font-color-dark: $black;
 $body-font-color-mid: $gray;
 $body-font-color-light: $white;
 $body-line-height-xs: 16px;

@@ -4,11 +4,8 @@ layout = "post"
 description = "Viewing a single blog post"
 is_hidden = 0
 
-[blogPost]
-slug = "{{ :slug }}"
-categoryPage = "blog/category"
-exceptCategories = "jenn-editing, slider-home"
-
+[userProfile]
+user_slug = "{{ :user-slug }}"
 ==
 <?php
 function onEnd()
@@ -28,6 +25,7 @@ function onEnd()
 
 <!-- Excerpt Post Section -->
 <div class="content">
+
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
 	<h1 class="title">{{ post.title }}<small></small></h1>
 	<div class="intro">
@@ -65,38 +63,16 @@ function onEnd()
 
 <!-- Author Section -->
 <div class="block-author">
-	<h3 class="subtitle is-3">Article written by</h3>
-	<div class="media">
-		<figure class="image is-128x128">
-			<img class="is-rounded" src="{{ post.user.getAvatarThumb(128) }}" >
-		</figure>
+{% component 'userProfile' %}
 
-		<div class="media-content">
-			<div class="content">
-				<strong>{{ post.user.first_name }} {{ post.user.last_name }}</strong>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor
-					vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-				</p>
-			</div>
-			<nav class="level is-mobile">
-				<div class="level-left">
-					<a class="level-item">
-						<span class="icon is-small"><i class="fas fa-envelope"></i></span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fab fa-twitter"></i></i></span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fab fa-instagram"></i></i></span>
-					</a>
-				</div>
-			</nav>
-		</div>
-	</div>
+<div class="user-bio">
+    <p>
+        {{userProfile.user.ideaverum_blogtoolbox_bio}}
+    </p>
+</div>
+
+	<h3 class="subtitle is-3">Article written by</h3>
+
 </div>
 
 <!-- Next / Previous Post Navigation -->

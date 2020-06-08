@@ -48,8 +48,8 @@
   font-family: serif;
   font-size: 45px;
   color: #e2ae7f;
-	font-weight: 400;
-	margin-right: 10px;
+  font-weight: 400;
+  margin-right: 10px;
   font-style: normal;
 }
 
@@ -129,7 +129,7 @@
  */
 
 .column-count {
-	column-gap: $global-gutter;
+  column-gap: $global-gutter;
 
   &.has-2 {
     column-count: 2;
@@ -138,4 +138,18 @@
   &.has-3 {
     column-count: 3;
   }
+}
+
+
+//Shady
+
+.is-shady {
+  animation: flyintoright .4s backwards;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  transition: all .2s ease-in-out;
 }

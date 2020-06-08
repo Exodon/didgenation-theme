@@ -1,0 +1,45 @@
+description = "Profile Page Layout"
+==
+<!DOCTYPE html>
+
+<html lang="eng">
+
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+
+    <body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
+
+            <!-- Header -->
+            <header class="header hero is-medium is-bold is-profile">
+				{% partial 'site/header' %}
+
+			<div class="card has-text-centered">
+					<figure class="image is-128x128">
+						<img class="is-rounded" src="{{userProfile.user.getAvatarThumb(128)}}">
+					</figure>
+					<h1 class="title">
+						{{userProfile.user.getFullNameAttribute()}}
+					</h1>
+					<h2 class="subtitle">
+						{{userProfile.user.ideaverum_blogtoolbox_bio}}
+					</h2>
+			</div>
+
+            </header>
+
+            <!-- Content -->
+            <section>
+              {% page %}
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                {% partial 'site/footer' %}
+            </footer>
+
+
+        <!-- Scripts -->
+        {% partial 'site/scripts' %}
+    </body>
+</html>
