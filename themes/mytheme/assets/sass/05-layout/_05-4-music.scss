@@ -1,0 +1,27 @@
+// ***************** MUSIC ***************** //
+// Description:
+// Generic style used for the Music block
+// --------------------------------------------------
+
+.block-music {
+  margin-top: 40px;
+  border: $global-border;
+  padding: $global-gutter;
+
+  .cd-month {
+    position: relative;
+
+    .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($global-component-background-light, 0.8);
+			padding: 2rem;
+			width: 100%;
+    }
+  }
+
+  .cd-list {
+    flex-flow: column;
+  }
+}
