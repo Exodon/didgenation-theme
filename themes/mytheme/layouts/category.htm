@@ -2,29 +2,32 @@ description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
-    <head>
-        {% partial 'site/meta' %}
-    </head>
-	<body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
 
-        <div>
-            <!-- Header -->
-            <header class="layout-header">
-                {% partial 'site/header' %}
-            </header>
+<head>
+	{% partial 'site/meta' %}
+</head>
 
-            <!-- Content -->
-            <section class="container">
-              {% page %}
-            </section>
+<body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
 
-            <!-- Footer -->
-            <footer class="footer">
-                {% partial 'site/footer' %}
-            </footer>
-        </div>
+	<div>
+		<!-- Header -->
+		<header class="layout-header">
+			{% partial 'site/header' %}
+		</header>
 
-        <!-- Scripts -->
-        {% partial 'site/scripts' %}
-    </body>
+		<!-- Content -->
+		<section class="container">
+			{% page %}
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer">
+			{% partial 'site/footer' %}
+		</footer>
+	</div>
+
+	<!-- Scripts -->
+	{% partial 'site/scripts' %}
+</body>
+
 </html>

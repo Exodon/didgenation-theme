@@ -4,42 +4,64 @@ description = "Profile Page Layout"
 
 <html lang="eng">
 
-    <head>
-        {% partial 'site/meta' %}
-    </head>
+<head>
+	{% partial 'site/meta' %}
+</head>
 
-    <body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
+<body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
 
-            <!-- Header -->
-            <header class="header hero is-medium is-bold is-profile">
-				{% partial 'site/header' %}
+	<!-- Header -->
+	<header class="header hero is-medium is-bold is-profile">
+		{% partial 'site/header' %}
 
-			<div class="card has-text-centered">
-					<figure class="image is-128x128">
-						<img class="is-rounded" src="{{userProfile.user.getAvatarThumb(128)}}">
-					</figure>
-					<h1 class="title">
-						{{userProfile.user.getFullNameAttribute()}}
-					</h1>
-					<h2 class="subtitle">
-						{{userProfile.user.ideaverum_blogtoolbox_bio}}
-					</h2>
+		<div class="card has-text-centered">
+			<figure class="image is-128x128">
+				<img class="is-rounded" src="{{userProfile.user.getAvatarThumb(128)}}">
+			</figure>
+			<h1 class="title">
+				{{userProfile.user.getFullNameAttribute()}}
+			</h1>
+
+			<p class="subtitle">
+				{{userProfile.user.ideaverum_blogtoolbox_business_position}}
+			</p>
+
+			<p class="biography">
+				{{userProfile.user.ideaverum_blogtoolbox_bio}}
+			</p>
+
+			<div class="social-media">
+				<a href="{{userProfile.user.ideaverum_blogtoolbox_contact_email}}" class="level-item">
+					<span class="icon is-small"><i class="fas fa-envelope"></i></span>
+				</a>
+				<a href="{{userProfile.user.ideaverum_blogtoolbox_facebook}}" class="level-item">
+					<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+				</a>
+				<a href="{{userProfile.user.ideaverum_blogtoolbox_twitter}}" class="level-item">
+					<span class="icon is-small"><i class="fab fa-twitter"></i></span>
+				</a>
+				<a href="{{userProfile.user.ideaverum_blogtoolbox_instagram}}" class="level-item">
+					<span class="icon is-small"><i class="fab fa-instagram"></i></span>
+				</a>
+				<a href="{{userProfile.user.ideaverum_blogtoolbox_linkedin}}" class="level-item">
+					<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
+				</a>
 			</div>
+		</div>
+	</header>
 
-            </header>
+	<!-- Content -->
+	<section>
+		{% page %}
+	</section>
 
-            <!-- Content -->
-            <section>
-              {% page %}
-            </section>
+	<!-- Footer -->
+	<footer class="footer">
+		{% partial 'site/footer' %}
+	</footer>
 
-            <!-- Footer -->
-            <footer class="footer">
-                {% partial 'site/footer' %}
-            </footer>
+	<!-- Scripts -->
+	{% partial 'site/scripts' %}
+</body>
 
-
-        <!-- Scripts -->
-        {% partial 'site/scripts' %}
-    </body>
 </html>

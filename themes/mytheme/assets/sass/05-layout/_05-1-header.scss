@@ -22,20 +22,38 @@
   background-position: center center;
 
   .card {
-		margin: 40px auto;
-		max-width: 500px;
-		background-color: $global-component-background-light;
-		padding: $global-gutter;
-		border-radius: $global-border-radius-component;
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: rgba($global-component-background-light, 0.8);
+    padding: $global-gutter;
+    border-radius: $global-border-radius-component;
 
-		figure {
-			display: inline-block;
-			padding-bottom: 20px;
-		}
+    .biography {
+      border-top: 1px dashed $gray;
+			border-bottom: 1px dashed $gray;
+      padding-top: 10px;
+      line-height: 28px;
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+    }
 
-		img {
-			padding: 5px;
-			border: 1px solid $gray;
-		}
-	}
+    .social-media {
+			text-align: center;
+
+			a {
+				display: inline-block;
+				margin-right: 10px;
+			}
+    }
+
+    figure {
+      display: inline-block;
+      padding-bottom: 20px;
+    }
+
+    img {
+      padding: 5px;
+      border: 2px dotted $gray;
+    }
+  }
 }
