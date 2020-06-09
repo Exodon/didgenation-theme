@@ -2,12 +2,12 @@ title = "Blog Category"
 url = "/blog/category/:slug/:page?"
 layout = "category"
 description = "Viewing blog posts in a specific category."
-is_hidden = 0
+hidden = "0"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"
-postsPerPage = 10
+postsPerPage = "10"
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -15,8 +15,9 @@ postPage = "blog/post"
 
 [blogCategories]
 slug = "{{ :slug }}"
-displayEmpty = 0
+displayEmpty = "0"
 categoryPage = "blog/category"
+
 ==
 <?php
 function onEnd()

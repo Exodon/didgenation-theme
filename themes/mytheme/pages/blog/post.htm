@@ -4,6 +4,10 @@ layout = "post"
 description = "Viewing a single blog post"
 is_hidden = 0
 
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
 [userProfile]
 user_slug = "{{ :user-slug }}"
 ==
@@ -61,18 +65,10 @@ function onEnd()
 	</footer>
 </article>
 
+
 <!-- Author Section -->
 <div class="block-author">
-{% component 'userProfile' %}
-
-<div class="user-bio">
-    <p>
-        {{userProfile.user.ideaverum_blogtoolbox_bio}}
-    </p>
-</div>
-
-	<h3 class="subtitle is-3">Article written by</h3>
-
+	{% partial 'profile/author' %}
 </div>
 
 <!-- Next / Previous Post Navigation -->

@@ -15,8 +15,8 @@ description = "Profile Page Layout"
 		{% partial 'site/header' %}
 
 		<div class="card has-text-centered">
-			<figure class="image is-128x128">
-				<img class="is-rounded" src="{{userProfile.user.getAvatarThumb(128)}}">
+			<figure class="image">
+				<img class="is-rounded" src="{{userProfile.user.avatar.path }}">
 			</figure>
 			<h1 class="title">
 				{{userProfile.user.getFullNameAttribute()}}

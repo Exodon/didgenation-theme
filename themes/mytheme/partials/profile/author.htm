@@ -1,0 +1,36 @@
+<!-- Author Section -->
+	<h3 class="subtitle is-3">Article written by</h3>
+	<div class="media">
+		<figure class="image is-128x128">
+			<img class="is-rounded" src="{{userProfile.user.getAvatarThumb(128)}}">
+		</figure>
+
+		<div class="media-content">
+			<div class="content">
+				<a href="{{userProfile.user.getLink}}">{{userProfile.user.getFullNameAttribute()}}</a>
+				<p>{{userProfile.user.ideaverum_blogtoolbox_business_position}}</p>
+				<p>{{userProfile.user.ideaverum_blogtoolbox_bio}}</p>
+			</div>
+			<nav class="level is-mobile">
+				<div class="level-left">
+					<div class="social-media">
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_contact_email}}" class="level-item">
+							<span class="icon is-small"><i class="fas fa-envelope"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_facebook}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_twitter}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-twitter"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_instagram}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-instagram"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_linkedin}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</div>

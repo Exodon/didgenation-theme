@@ -13,3 +13,5 @@
 /index.php
 /server.php
 /.htaccess
+themes/mytheme/assets/js/theme.min.js
+themes/mytheme/assets/css/theme.min.css
