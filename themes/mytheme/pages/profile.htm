@@ -7,16 +7,8 @@ is_hidden = 0
 user_slug = "{{ :user-slug }}"
 ==
 
-<div class="box cta">
-	<p class="has-text-centered">
-		<span class="tag is-primary">New</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-		ut aliquip ex ea commodo consequat.
-	</p>
-</div>
 <section class="container">
-	<h2 class="subtitle has-text-centered">
-		My Articles
-	</h2>
+	<h2 class="subtitle has-text-centered is-size-1">My Articles</h2>
 	<div class="columns features">
 		<div class="column is-4">
 			<div class="card is-shady">
@@ -80,47 +72,34 @@ user_slug = "{{ :user-slug }}"
 
 		<div class="media-content">
 			<div class="content">
-				<strong>{{userProfile.user.getFullNameAttribute()}}</strong>
+				<a href="{{userProfile.user.getLink}}">{{userProfile.user.getFullNameAttribute()}}</a>
+				<p>{{userProfile.user.ideaverum_blogtoolbox_business_position}}</p>
 				<p>{{userProfile.user.ideaverum_blogtoolbox_bio}}</p>
 			</div>
 			<nav class="level is-mobile">
 				<div class="level-left">
-					<a class="level-item">
-						<span class="icon is-small"><i class="fas fa-envelope"></i>{{userProfile.user.ideaverum_blogtoolbox_contact_email}}</span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fab fa-facebook-f"></i>{{userProfile.user.ideaverum_blogtoolbox_facebook}}</span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fab fa-twitter"></i>{{userProfile.user.ideaverum_blogtoolbox_twitter}}</span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fab fa-instagram"></i>{{userProfile.user.ideaverum_blogtoolbox_instagram}}</span>
-					</a>
-					<a class="level-item">
-						<span class="icon is-small"><i class="fab fa-linkedin"></i>{{userProfile.user.ideaverum_blogtoolbox_linkedin}}</span>
-					</a>
+					<div class="social-media">
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_contact_email}}" class="level-item">
+							<span class="icon is-small"><i class="fas fa-envelope"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_facebook}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_twitter}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-twitter"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_instagram}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-instagram"></i></span>
+						</a>
+						<a href="{{userProfile.user.ideaverum_blogtoolbox_linkedin}}" class="level-item">
+							<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
+						</a>
+					</div>
 				</div>
 			</nav>
 		</div>
 	</div>
 </div>
-
-
-<section>
-	<h2>{{userProfile.user.getFullNameAttribute()}}</h2>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_bio}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_facebook}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_twitter}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_youtube}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_instagram}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_linkedin}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_medium}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_twitch}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_contact_email}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_user_slug}}</p>
-	<p>{{userProfile.user.ideaverum_blogtoolbox_business_position}}</p>
-</section>
 
 <section id="post">
 	{% for post in userProfile.user.getPosts() %}
