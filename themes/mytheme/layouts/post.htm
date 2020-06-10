@@ -18,15 +18,13 @@ description = "Post Page Layout"
 	<div class="container">
 		<div class="columns">
 			<!-- Content -->
-			<section class="column is-9">
+			<section class="column">
 				{% page %}
 			</section>
 
 			<!-- Sidebar -->
 			<aside class="column is-3 sidebar">
-				<article id="widget_1" class="widget"></article>
-				<article id="widget_2" class="widget"></article>
-				<article id="widget_3" class="widget">...</article>
+				{% partial 'site/sidebar' %}
 			</aside>
 		</div>
 	</div>

@@ -1,0 +1,15 @@
+// ***************** SIDEBAR ***************** //
+// Description:
+// Generic style used for the sidebar
+// --------------------------------------------------
+
+.sidebar {
+  background-color: $global-component-background-light;
+  border-left: $global-border;
+
+  .widget {
+		margin-bottom: 3rem;
+		padding: 0.75rem;
+    background-color: rgba($global-component-background-mid, 0.1);
+  }
+}

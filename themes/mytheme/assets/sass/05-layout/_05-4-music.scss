@@ -16,11 +16,20 @@
       bottom: 0;
       left: 0;
       background-color: rgba($global-component-background-light, 0.8);
-			padding: 2rem;
-			width: 100%;
+      padding: 2rem;
+      width: 100%;
     }
   }
 
+  .cd-list {
+    flex-flow: column;
+  }
+}
+
+// ==================================================
+// Music Sidebar Widget
+// ==================================================
+.widget-music {
   .cd-list {
     flex-flow: column;
   }
