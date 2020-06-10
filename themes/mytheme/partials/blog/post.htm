@@ -19,7 +19,7 @@
             </div>
             <div class="date">
               <span class="published"><i class="far fa-calendar-alt"></i> {{ post.published_at|date('M d, Y') }}</span>
-              {# <span class="author"><i class="far fa-grin-tongue-wink"></i> {{ post.author.full_name }}</span> #}
+              {# <span class="author">{{ post.author.full_name }}</span> #}
             </div>
             {% if post.categories.count %}
             <div class="category-holder">
