@@ -1,72 +1,37 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "music"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+
 <!-- Musicography Widget Sidebar -->
 <div class="widget-music">
-	<h3 class="title has-text-centered is-size-5">
-		Didgeridoo musicography
-	</h3>
+	<h3 class="title has-text-centered is-size-4">Latest CD´s</h3>
 	<div class="columns cd-list">
+		{% for post in posts %}
+		{% set image = post.featured_images.first %}
 		<div class="column cd-list-item">
 			<article class="media">
-				<figure class="media-left">
-					<p class="image is-64x64">
-						<img src="https://f4.bcbits.com/img/a3814003062_16.jpg">
-					</p>
-				</figure>
+				<a href="{{ post.url }}">
+					<figure class="media-left">
+						<p class="image is-96x96">
+							<img src="{{ image.path }}" alt="{{ post.title }}" />
+						</p>
+					</figure>
+				</a>
 				<div class="media-right">
 					<div class="content">
-						<p>
-							<strong>CD Name</strong> <small>by</small> <small>Band name</small>
-						</p>
+						<h1 class="title is-size-5">
+							<a href="{{ post.url }}">{{ post.title }}</a>
+						</h1>
 					</div>
 				</div>
 			</article>
 		</div>
-		<div class="column">
-			<article class="media">
-				<figure class="media-left">
-					<p class="image is-64x64">
-						<img src="https://f4.bcbits.com/img/a3814003062_16.jpg">
-					</p>
-				</figure>
-				<div class="media-right">
-					<div class="content">
-						<p>
-							<strong>CD Name</strong> <small>by</small> <small>Band name</small>
-						</p>
-					</div>
-				</div>
-			</article>
-		</div>
-		<div class="column">
-			<article class="media">
-				<figure class="media-left">
-					<p class="image is-64x64">
-						<img src="https://f4.bcbits.com/img/a3814003062_16.jpg">
-					</p>
-				</figure>
-				<div class="media-right">
-					<div class="content">
-						<p>
-							<strong>CD Name</strong> <small>by</small> <small>Band name</small>
-						</p>
-					</div>
-				</div>
-			</article>
-		</div>
-		<div class="column">
-			<article class="media">
-				<figure class="media-left">
-					<p class="image is-64x64">
-						<img src="https://f4.bcbits.com/img/a3814003062_16.jpg">
-					</p>
-				</figure>
-				<div class="media-right">
-					<div class="content">
-						<p>
-							<strong>CD Name</strong> <small>by</small> <small>Band name</small>
-						</p>
-					</div>
-				</div>
-			</article>
-		</div>
+		{% endfor %}
 	</div>
 </div>

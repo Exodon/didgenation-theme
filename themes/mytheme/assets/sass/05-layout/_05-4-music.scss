@@ -33,4 +33,13 @@
   .cd-list {
     flex-flow: column;
   }
+
+  article {
+		border-bottom: $global-border-light;
+		padding-bottom: $global-gutter-small;
+	}
+
+	.media {
+		align-items: center;
+	}
 }
