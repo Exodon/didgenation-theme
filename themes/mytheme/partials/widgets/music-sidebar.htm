@@ -1,7 +1,7 @@
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "music"
-postsPerPage = 1
+postsPerPage = 4
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
@@ -10,7 +10,7 @@ postPage = "blog/post"
 
 <!-- Musicography Widget Sidebar -->
 <div class="widget-music">
-	<h3 class="title has-text-centered is-size-4">Latest CD´s</h3>
+	<h3 class="title has-text-centered is-size-4">Latest Cd´s</h3>
 	<div class="columns cd-list">
 		{% for post in posts %}
 		{% set image = post.featured_images.first %}
@@ -28,6 +28,9 @@ postPage = "blog/post"
 						<h1 class="title is-size-5">
 							<a href="{{ post.url }}">{{ post.title }}</a>
 						</h1>
+						<h2 class="subtitle is-size-6 has-text-weight-normal is-italic">
+							{{ post.excerpt|raw }}
+						</h2>
 					</div>
 				</div>
 			</article>
