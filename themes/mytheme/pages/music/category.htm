@@ -1,7 +1,7 @@
-title = "Blog Category"
-url = "/article/category/:slug/:page?"
+title = "Didgeridoo Musicography"
+url = "/music/list/:slug/:page?"
 layout = "category"
-description = "Viewing blog posts in a specific category."
+description = "Viewing Didgeridoo Musicography Index."
 hidden = "0"
 
 [blogPosts]
@@ -10,13 +10,13 @@ categoryFilter = "{{ :slug }}"
 postsPerPage = "10"
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
-categoryPage = "blog/category"
-postPage = "blog/post"
+categoryPage = "music/category"
+postPage = "music/post"
 
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = "0"
-categoryPage = "blog/category"
+categoryPage = "music/category"
 
 ==
 <?php
@@ -28,19 +28,22 @@ function onEnd()
 }
 ?>
 ==
-<section class="hero is-medium is-primary is-bold">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container has-text-centered">
       {% if not category %}
         <h2>Category not found</h2>
       {% else %}
-        <h1 class="title">{{ category.name }}</h1>
-        <h2 class="subtitle">{{ category.description | raw }}</h2>
+        <h1 class="title is-size-1 has-text-white">{{ category.name }}</h1>
+        <h2 class="subtitle is-size-2 has-text-white">{{ category.description | raw }}</h2>
       {% endif %}
     </div>
   </div>
 </section>
-
+<div class="container">
+	{% partial 'widgets/music' %}
+</div>
 <div class="block-articles">
+	<h2 class="title is-size-2 has-text-centered">Didgeridoo Musicography List</h2>
   {% partial 'blog/posts' %}
 </div>

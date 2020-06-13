@@ -1,15 +1,13 @@
-title = "Blog Post"
-url = "/article/:slug"
+title = "Didgeridoo Album"
+url = "/music/album/:slug"
 layout = "post"
-description = "Viewing a single blog post"
+description = "Viewing a single blog post for music"
 is_hidden = 0
 
 [blogPost]
 slug = "{{ :slug }}"
-categoryPage = "blog/category"
+categoryPage = "music/category"
 
-[userProfile]
-user_slug = "{{ :user-slug }}"
 ==
 <?php
 function onEnd()
@@ -29,20 +27,20 @@ function onEnd()
 
 <!-- Excerpt Post Section -->
 <div class="content">
-
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-	<h1 class="title">{{ post.title }}<small></small></h1>
-	<div class="intro">
+	<h1 class="title is-size-4">
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</h1>
+	<h2 class="subtitle is-size-5 has-text-weight-normal is-italic">
 		{{ post.excerpt|raw }}
-	</div>
+	</h2>
 </div>
 
 <!-- Beginning of the Post -->
-
 <article class="content">
 	<header class="post-image">
 		{% if image %}
-			<figure class="image is-3by1 is-image-cover as-top">
+			<figure class="image is-square is-image-cover as-center">
 				<img src="{{ image.path }}" alt="{{ post.title }}" />
 			</figure>
 		{% endif %}
@@ -53,8 +51,6 @@ function onEnd()
 	</div>
 
 	<footer>
-		<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-		{# <span class="author"><i class="icon icon-user"></i> {{ post.author.full_name }}</span> #}
 		{% if post.categories.count %} in
 		<span class="category">
 			{% for category in post.categories %}
@@ -64,11 +60,6 @@ function onEnd()
 		{% endif %}
 	</footer>
 </article>
-
-<!-- Author Section -->
-<div class="block-author">
-	{% partial 'widgets/author' %}
-</div>
 
 <!-- Next / Previous Post Navigation -->
 <div class="block-post-navigation">

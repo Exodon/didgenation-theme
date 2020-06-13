@@ -1,36 +1,43 @@
-<!-- Author Section -->
-	<h3 class="subtitle is-3">Article written by</h3>
-	<div class="media">
-		<figure class="image is-128x128">
-			<img class="is-rounded" src="{{userProfile.user.getAvatarThumb(128)}}">
-		</figure>
+<!-- add variable to be possible to user the blogtoolbox outside of the profile page  -->
+{% set author = post.getAuthor() %}
 
-		<div class="media-content">
-			<div class="content">
-				<a href="{{userProfile.user.getLink}}">{{userProfile.user.getFullNameAttribute()}}</a>
-				<p>{{userProfile.user.ideaverum_blogtoolbox_business_position}}</p>
-				<p>{{userProfile.user.ideaverum_blogtoolbox_bio}}</p>
-			</div>
-			<nav class="level is-mobile">
-				<div class="level-left">
-					<div class="social-media">
-						<a href="{{userProfile.user.ideaverum_blogtoolbox_contact_email}}" class="level-item">
-							<span class="icon is-small"><i class="fas fa-envelope"></i></span>
-						</a>
-						<a href="{{userProfile.user.ideaverum_blogtoolbox_facebook}}" class="level-item">
-							<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
-						</a>
-						<a href="{{userProfile.user.ideaverum_blogtoolbox_twitter}}" class="level-item">
-							<span class="icon is-small"><i class="fab fa-twitter"></i></span>
-						</a>
-						<a href="{{userProfile.user.ideaverum_blogtoolbox_instagram}}" class="level-item">
-							<span class="icon is-small"><i class="fab fa-instagram"></i></span>
-						</a>
-						<a href="{{userProfile.user.ideaverum_blogtoolbox_linkedin}}" class="level-item">
-							<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
-						</a>
+
+<!-- Author Section -->
+	<h3 class="subtitle is-4">Article written by <small class="subtitle is-size-4 is-italic"><a href="{{ 'profile'|page({'user-slug':
+	post.getAuthor().ideaverum_blogtoolbox_user_slug }) }}">{{ post.getAuthor().first_name }} {{ post.getAuthor().last_name }}</a></small></h3>
+	<div class="media">
+			<div class="columns">
+			<figure class="image is-128x128">
+				<a href="{{ 'profile'|page({'user-slug':post.getAuthor().ideaverum_blogtoolbox_user_slug }) }}"><img class="is-rounded" src="{{author.getAvatarThumb(128)}}"></a>
+			</figure>
+			<div class="column">
+				<div class="media-content">
+					<div class="content">
+						<p>{{author.ideaverum_blogtoolbox_business_position}}</p>
+						<p>{{author.ideaverum_blogtoolbox_bio}}</p>
 					</div>
+					<nav class="level is-mobile">
+						<div class="level-left">
+							<div class="social-media">
+								<a href="{{author.ideaverum_blogtoolbox_contact_email}}" class="level-item">
+									<span class="icon is-small"><i class="fas fa-envelope"></i></span>
+								</a>
+								<a href="{{author.ideaverum_blogtoolbox_facebook}}" class="level-item">
+									<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+								</a>
+								<a href="{{author.ideaverum_blogtoolbox_twitter}}" class="level-item">
+									<span class="icon is-small"><i class="fab fa-twitter"></i></span>
+								</a>
+								<a href="{{author.ideaverum_blogtoolbox_instagram}}" class="level-item">
+									<span class="icon is-small"><i class="fab fa-instagram"></i></span>
+								</a>
+								<a href="{{author.ideaverum_blogtoolbox_linkedin}}" class="level-item">
+									<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
+								</a>
+							</div>
+						</div>
+					</nav>
 				</div>
-			</nav>
+			</div>
 		</div>
 	</div>

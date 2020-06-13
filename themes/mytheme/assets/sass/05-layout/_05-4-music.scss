@@ -5,8 +5,14 @@
 
 .block-music {
   margin-top: 40px;
-  border: $global-border;
-  padding: $global-gutter;
+  position: relative;
+	border: $global-border;
+	padding-top: $global-gutter-small;
+
+  .title-holder {
+    left: -116px;
+    top: -144px;
+	}
 
   .cd-month {
     position: relative;
@@ -35,11 +41,11 @@
   }
 
   article {
-		border-bottom: $global-border-light;
-		padding-bottom: $global-gutter-small;
-	}
+    border-bottom: $global-border-light;
+    padding-bottom: $global-gutter-small;
+  }
 
-	.media {
-		align-items: center;
-	}
+  .media {
+    align-items: center;
+  }
 }
