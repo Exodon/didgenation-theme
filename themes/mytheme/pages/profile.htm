@@ -6,24 +6,16 @@ is_hidden = 0
 [userProfile]
 user_slug = "{{ :user-slug }}"
 ==
+
+
+
 <section class="container">
 	<h2 class="subtitle has-text-centered is-size-1">My Articles</h2>
 	<div class="columns features">
 		{% for post in userProfile.user.getPosts() %}
-		<div class="column is-4">
-			<div class="card is-shady">
-				<div class="card-image has-text-centered">
-					<i class="fa fa-image"></i>
-				</div>
-				<div class="card-content">
-					<div class="content">
-						<h4>{{post.title}}</h4>
-						<p>{{ post.excerpt|raw }}</p>
-						<p><a href="#">Learn more</a></p>
-					</div>
-				</div>
+			<div class="column is-4">
+				{% partial 'blog/post-default' post=post %}
 			</div>
-		</div>
 		{% endfor %}
 	</div>
 </section>

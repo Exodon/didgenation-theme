@@ -1,4 +1,5 @@
 {% set image = post.featured_images.first %}
+{% set author = post.getAuthor() %}
 <div class="column">
   <article class="card">
           <div class="card-image">
@@ -11,13 +12,20 @@
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+								<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+								<h2 class="subtitle is-6"> by
+									<small class="subtitle is-size-6 is-italic">
+										<a class="is-underline"
+											href="{{ 'profile'|page({'user-slug':post.getAuthor().ideaverum_blogtoolbox_user_slug }) }}">{{ post.getAuthor().first_name }}
+											{{ post.getAuthor().last_name }}</a>
+									</small>
+								</h2>
               </div>
             </div>
             <div class="content">
               {{ post.summary|truncate(100)|raw }}
             </div>
-            <div class="date">
+            <div class="date tag">
               <span class="published"><i class="far fa-calendar-alt"></i> {{ post.published_at|date('M d, Y') }}</span>
               <span class="author">{{ post.author.full_name }}</span>
             </div>

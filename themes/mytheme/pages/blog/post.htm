@@ -10,6 +10,11 @@ categoryPage = "blog/category"
 
 [userProfile]
 user_slug = "{{ :user-slug }}"
+
+[timeToRead]
+postSlug = "{{ :slug }}"
+readingSpeed = 300
+isRoundingUpEnabled = 1
 ==
 <?php
 function onEnd()
@@ -26,12 +31,18 @@ function onEnd()
 {% set image = post.featured_images.first %}
 {% set nextPost = blogPost.nextPost %}
 {% set lastPost = blogPost.previousPost %}
+{% set author = post.getAuthor() %}
 
 <!-- Excerpt Post Section -->
 <div class="content">
 
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-	<h1 class="title">{{ post.title }}<small></small></h1>
+	<h1 class="title">{{ post.title }} <span class="tag">{% component 'timeToRead' %}</span></h1>
+	<h2 class="subtitle is-5">Article written by
+		<small class="subtitle is-size-6 is-italic">
+			<a class="is-underline" href="{{ 'profile'|page({'user-slug':post.getAuthor().ideaverum_blogtoolbox_user_slug }) }}">{{ post.getAuthor().first_name }} {{ post.getAuthor().last_name }}</a>
+		</small>
+	</h2>
 	<div class="intro">
 		{{ post.excerpt|raw }}
 	</div>
@@ -54,9 +65,8 @@ function onEnd()
 
 	<footer>
 		<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-		{# <span class="author"><i class="icon icon-user"></i> {{ post.author.full_name }}</span> #}
 		{% if post.categories.count %} in
-		<span class="category">
+		<span class="tag is-medium">
 			{% for category in post.categories %}
 			<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
 			{% endfor %}

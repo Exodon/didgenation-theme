@@ -5,6 +5,6 @@
 
 .block-author {
   margin-top: $global-gutter;
-  border: $global-border;
-  padding: $global-gutter;
+	padding: $global-gutter;
+	background-color: rgba($gray, 0.1);
 }
