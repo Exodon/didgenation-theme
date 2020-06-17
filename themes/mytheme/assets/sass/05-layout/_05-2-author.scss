@@ -5,6 +5,15 @@
 
 .block-author {
   margin-top: $global-gutter;
-	padding: $global-gutter;
-	background-color: rgba($gray, 0.1);
+  padding: $global-gutter;
+  background-color: rgba($gray, 0.1);
+}
+
+// ==================================================
+// Profile page Post
+// ==================================================
+.is_profile {
+  .container .columns {
+    flex-wrap: wrap;
+  }
 }
