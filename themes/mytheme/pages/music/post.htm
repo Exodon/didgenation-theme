@@ -38,21 +38,25 @@ function onEnd()
 
 <!-- Beginning of the Post -->
 <article class="content">
-	<header class="post-image">
-		{% if image %}
-			<figure class="image is-square is-image-cover as-center">
-				<img src="{{ image.path }}" alt="{{ post.title }}" />
-			</figure>
-		{% endif %}
-	</header>
-
-	<div class="content">
-		{{ post.content_html|raw }}
+	<div class="columns is-vcentered">
+		<div class="column">
+			<header class="post-image">
+			{% if image %}
+				<figure class="image is-square is-image-cover as-center">
+					<img src="{{ image.path }}" alt="{{ post.title }}" />
+				</figure>
+			{% endif %}
+			</header>
+		</div>
+		<div class="column">
+			<div class="content">
+				{{ post.content_html|raw }}
+			</div>
+		</div>
 	</div>
-
 	<footer>
 		{% if post.categories.count %} in
-		<span class="category">
+		<span class="tag is-medium">
 			{% for category in post.categories %}
 			<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
 			{% endfor %}

@@ -6,13 +6,13 @@
 .block-music {
   margin-top: 40px;
   position: relative;
-	border: $global-border;
-	padding-top: $global-gutter-small;
+  border: $global-border;
+  padding-top: $global-gutter-small;
 
   .title-holder {
     left: -116px;
     top: -144px;
-	}
+  }
 
   .cd-month {
     position: relative;
@@ -48,4 +48,42 @@
   .media {
     align-items: center;
   }
+}
+
+// ==================================================
+// Post Music
+// ==================================================
+.is_music-post {
+  .post-image {
+    figure {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+
+.is_music-category {
+  .block-articles {
+
+    .title-holder {
+      display: none;
+    }
+
+		.columns {
+			flex-wrap: wrap;
+		}
+
+		.column {
+			flex-basis: percentage(1/4);
+
+			.date {
+				display: none;
+			}
+
+			.title {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }

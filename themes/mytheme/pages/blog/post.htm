@@ -38,7 +38,7 @@ function onEnd()
 
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
 	<h1 class="title">{{ post.title }} <span class="tag">{% component 'timeToRead' %}</span></h1>
-	<h2 class="subtitle is-5">Article written by
+	<h2 class="subtitle is-5">by
 		<small class="subtitle is-size-6 is-italic">
 			<a class="is-underline" href="{{ 'profile'|page({'user-slug':post.getAuthor().ideaverum_blogtoolbox_user_slug }) }}">{{ post.getAuthor().first_name }} {{ post.getAuthor().last_name }}</a>
 		</small>

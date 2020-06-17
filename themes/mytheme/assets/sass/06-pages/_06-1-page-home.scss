@@ -15,7 +15,6 @@
 
     .card-content {
         position: relative;
-        border-top: $global-border;
     }
 
     .card-image {
@@ -51,7 +50,6 @@
 
     // Overwrite
     .card {
-        border: $global-border;
         height: 100%;
     }
 
