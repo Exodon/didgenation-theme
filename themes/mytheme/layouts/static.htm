@@ -1,4 +1,8 @@
-description = "Post Page Layout"
+description = "Static Page Layout"
+
+[staticPage]
+useContent = 1
+default = 0
 ==
 <!DOCTYPE html>
 
@@ -24,7 +28,7 @@ description = "Post Page Layout"
 
 			<!-- Sidebar -->
 			<aside class="column is-3 sidebar">
-				{% partial 'site/sidebar-post' %}
+				{% partial 'site/sidebar' %}
 			</aside>
 		</div>
 	</div>
