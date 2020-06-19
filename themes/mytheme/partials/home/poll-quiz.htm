@@ -1,0 +1,22 @@
+[viewBag]
+
+[poll]
+poll-reference = "poll-home"
+
+[quiz]
+quiz-reference = "quiz-home"
+==
+<div class="block-poll">
+	<h3 class="title has-text-centered is-size-4">Tell us your opnion</h3>
+	<div class="columns">
+		<div class="column">
+			GRAPHICS
+		</div>
+		<div class="column">
+			{% component 'poll' %}
+		</div>
+		<div class="column">
+			{% component 'quiz' %}
+		</div>
+	</div>
+</div>
