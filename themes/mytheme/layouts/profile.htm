@@ -29,23 +29,47 @@ description = "Profile Page Layout"
 			<p class="biography">
 				{{userProfile.user.ideaverum_blogtoolbox_bio}}
 			</p>
-
 			<div class="social-media">
-				<a href="{{userProfile.user.ideaverum_blogtoolbox_contact_email}}" class="level-item">
-					<span class="icon is-small"><i class="fas fa-envelope"></i></span>
+				{% if userProfile.user.ideaverum_blogtoolbox_contact_email != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_contact_email}}">
+					<span class="icon is-small"><i class="fa fa-envelope"></i></span>
 				</a>
-				<a href="{{userProfile.user.ideaverum_blogtoolbox_facebook}}" class="level-item">
-					<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+				{% endif %}
+				{% if userProfile.user.ideaverum_blogtoolbox_facebook != "" %}
+					<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_facebook}}">
+						<span class="icon is-small"><i class="fab fa-facebook-f"></i></span>
+					</a>
+				{% endif %}
+				{% if userProfile.user.ideaverum_blogtoolbox_youtube != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_youtube}}">
+					<span class="icon is-small"><i class="fab fa-youtube"></i></span>
 				</a>
-				<a href="{{userProfile.user.ideaverum_blogtoolbox_twitter}}" class="level-item">
+				{% endif %}
+				{% if userProfile.user.ideaverum_blogtoolbox_twitter != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_twitter}}">
 					<span class="icon is-small"><i class="fab fa-twitter"></i></span>
 				</a>
-				<a href="{{userProfile.user.ideaverum_blogtoolbox_instagram}}" class="level-item">
+				{% endif %}
+				{% if userProfile.user.ideaverum_blogtoolbox_instagram != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_instagram}}">
 					<span class="icon is-small"><i class="fab fa-instagram"></i></span>
 				</a>
-				<a href="{{userProfile.user.ideaverum_blogtoolbox_linkedin}}" class="level-item">
+				{% endif %}
+				{% if userProfile.user.ideaverum_blogtoolbox_linkedin != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_linkedin}}">
 					<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
 				</a>
+				{% endif %}
+				{% if userProfile.user.ideaverum_blogtoolbox_twitch != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_twitch}}">
+					<span class="icon is-small"><i class="fab fa-twitch"></i></span>
+				</a>
+				{% endif %}
+				{% if userProfile.user.ideaverum_blogtoolbox_medium != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_medium}}">
+					<span class="icon is-small"><i class="fa fa-window-restore"></i></span>
+				</a>
+				{% endif %}
 			</div>
 		</div>
 	</header>

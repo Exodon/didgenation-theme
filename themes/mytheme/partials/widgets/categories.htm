@@ -1,0 +1,12 @@
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[viewBag]
+==
+<!-- Recent Post Widget Sidebar -->
+<div class="content">
+	<h3 class="title has-text-centered is-size-4">Article Categories</h3>
+	{% component 'blogCategories' %}
+</div>

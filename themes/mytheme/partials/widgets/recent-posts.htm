@@ -7,13 +7,11 @@ sortOrder = "published_at desc"
 
 <!-- Recent Post Widget Sidebar -->
 <div class="content">
-	<h3 class="title has-text-centered is-size-5">
-		Recent Posts
-	</h3>
-	<ol type="1">
+	<h3 class="title has-text-centered is-size-4">Recent Posts</h3>
+	<ul>
 		{% for post in blogPosts.posts %}
-		<li><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li>
+			<li><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
-	</ol>
+	</ul>
 </div>
 
