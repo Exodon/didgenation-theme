@@ -3,7 +3,7 @@
 
 
 <!-- Author Section -->
-	<h3 class="subtitle is-4">Article written by <small class="subtitle is-size-5 is-italic"><a class="is-underline" href="{{ 'profile'|page({'user-slug':
+	<h3 class="subtitle is-4">Article written by <small class="subtitle is-size-5 is-italic"><a href="{{ 'profile'|page({'user-slug':
 	post.getAuthor().ideaverum_blogtoolbox_user_slug }) }}">{{ post.getAuthor().first_name }} {{ post.getAuthor().last_name }}</a></small></h3>
 	<div class="media">
 			<div class="columns">
@@ -13,15 +13,15 @@
 			<div class="column">
 				<div class="media-content">
 					<div class="content">
-						<p>{{author.ideaverum_blogtoolbox_business_position}}</p>
+						<p class="has-text-weight-bold">{{author.ideaverum_blogtoolbox_business_position}}</p>
 						<p>{{author.ideaverum_blogtoolbox_bio}}</p>
 					</div>
 					<nav class="level is-mobile">
 						<div class="level-left">
 							<div class="social-media">
-								{% if author.ideaverum_blogtoolbox_contact_email != "" %}
-								<a target="_blank" href="{{author.ideaverum_blogtoolbox_contact_email}}">
-									<span class="icon is-small"><i class="fa fa-envelope"></i></span>
+								{% if author.ideaverum_blogtoolbox_twitch != "" %}
+								<a target="_blank" href="{{author.ideaverum_blogtoolbox_twitch}}">
+									<span class="icon is-small"><i class="fab fa-chrome"></i></span>
 								</a>
 								{% endif %}
 								{% if author.ideaverum_blogtoolbox_facebook != "" %}
@@ -49,14 +49,9 @@
 									<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
 								</a>
 								{% endif %}
-								{% if author.ideaverum_blogtoolbox_twitch != "" %}
-								<a target="_blank" href="{{author.ideaverum_blogtoolbox_twitch}}">
-									<span class="icon is-small"><i class="fab fa-twitch"></i></span>
-								</a>
-								{% endif %}
 								{% if author.ideaverum_blogtoolbox_medium != "" %}
 								<a target="_blank" href="{{author.ideaverum_blogtoolbox_medium}}">
-									<span class="icon is-small"><i class="fa fa-window-restore"></i></span>
+									<span class="icon is-small"><i class="fab fa-medium"></i></span>
 								</a>
 								{% endif %}
 							</div>

@@ -30,9 +30,9 @@ description = "Profile Page Layout"
 				{{userProfile.user.ideaverum_blogtoolbox_bio}}
 			</p>
 			<div class="social-media">
-				{% if userProfile.user.ideaverum_blogtoolbox_contact_email != "" %}
-				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_contact_email}}">
-					<span class="icon is-small"><i class="fa fa-envelope"></i></span>
+				{% if userProfile.user.ideaverum_blogtoolbox_twitch != "" %}
+				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_twitch}}">
+					<span class="icon is-small"><i class="fab fa-chrome"></i></span>
 				</a>
 				{% endif %}
 				{% if userProfile.user.ideaverum_blogtoolbox_facebook != "" %}
@@ -60,14 +60,9 @@ description = "Profile Page Layout"
 					<span class="icon is-small"><i class="fab fa-linkedin"></i></span>
 				</a>
 				{% endif %}
-				{% if userProfile.user.ideaverum_blogtoolbox_twitch != "" %}
-				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_twitch}}">
-					<span class="icon is-small"><i class="fab fa-twitch"></i></span>
-				</a>
-				{% endif %}
 				{% if userProfile.user.ideaverum_blogtoolbox_medium != "" %}
 				<a target="_blank" href="{{userProfile.user.ideaverum_blogtoolbox_medium}}">
-					<span class="icon is-small"><i class="fa fa-window-restore"></i></span>
+					<span class="icon is-small"><i class="fab fa-medium"></i></span>
 				</a>
 				{% endif %}
 			</div>
