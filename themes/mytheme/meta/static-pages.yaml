@@ -2,3 +2,4 @@ static-pages:
     become-hero: {  }
     submit-article: {  }
     about-us: {  }
+    faq: {  }

@@ -1,0 +1,47 @@
+// ***************** POLL & QUIZ ***************** //
+// Description:
+// Generic style used for Poll & Quiz
+// --------------------------------------------------
+
+
+// ==================================================
+// Poll & Quiz
+// ==================================================
+.poll-form,
+.quiz-form {
+
+  .poll-title,
+  .quiz-title {
+    color: #363636;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.125;
+    margin-bottom: 1.25rem;
+  }
+
+  .radio,
+  .checkbox {
+    display: block;
+    margin-bottom: .75em;
+    margin-left: .5em;
+  }
+}
+
+// ==================================================
+// Poll
+// ==================================================
+.poll-form {}
+
+
+// ==================================================
+// QUIZ
+// ==================================================
+.quiz-form {
+  .control-label {
+    display: none;
+  }
+
+  .checkbox-group {
+    margin-left: .5em;
+  }
+}

@@ -9,9 +9,8 @@ sortOrder = "published_at desc"
 <div class="content">
 	<h3 class="title has-text-centered is-size-4">Recent Posts</h3>
 	<ul>
-		{% for post in blogPosts.posts %}
-			<li><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li>
+		{% for key, post in blogPosts.posts %}
+			<li class="post-{{key}}"><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
 	</ul>
 </div>
-
