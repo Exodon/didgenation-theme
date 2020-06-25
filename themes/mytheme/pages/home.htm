@@ -2,12 +2,31 @@ title = "Welcome"
 url = "/"
 layout = "home"
 is_hidden = 0
+
+[poll homeA]
+poll-reference = "poll-home-1"
+
+[poll homeB]
+poll-reference = "poll-home-2"
 ==
 <!-- Slider -->
 {% partial 'home/home-swiper' %}
 
 <!-- Poll & Quiz -->
-{% partial 'home/poll-quiz' %}
+<div class="block-poll">
+	<h3 class="title has-text-centered is-size-4">Tell us your opnion</h3>
+	<div class="columns">
+		<div class="column">
+			GRAPHICS
+		</div>
+		<div class="column">
+			{% component 'homeA' %}
+		</div>
+		<div class="column">
+			{% component 'homeB' %}
+		</div>
+	</div>
+</div>
 
 <!-- News Trending -->
 {% partial 'home/home-news-trending' %}
