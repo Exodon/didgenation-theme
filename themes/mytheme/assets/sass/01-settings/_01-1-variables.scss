@@ -8,10 +8,8 @@
 // ==================================================
 // Font Family
 // ==================================================
-$montserrat: "Montserrat",
-sans-serif;
-$muli: "Muli",
-sans-serif;
+$montserrat: "Montserrat",sans-serif;
+$muli: "Muli",sans-serif;
 
 // ==================================================
 // Colors : Names from : http://chir.ag/projects/name-that-color
@@ -58,11 +56,11 @@ $global-gutter-small: 20px;
 // Body
 // ==================================================
 $body-color: $white;
-$body-font-size: 14px;
-$body-font-size-xs: 10px;
-$body-font-size-s: 12px;
-$body-font-size-xl: 16px;
-$body-font-size-xxl: 18px;
+// $body-font-size: 16px;
+// $body-font-size-xs: 10px;
+// $body-font-size-s: 12px;
+// $body-font-size-xl: 16px;
+// $body-font-size-xxl: 18px;
 $body-font-family: $muli;
 $body-font-weight: 300;
 $body-font-weight-bold: 700;

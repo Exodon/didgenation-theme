@@ -9,3 +9,33 @@
 @import '05-layout/_all';
 @import '06-pages/_all';
 @import '07-utility/_all';
+
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito",sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$widescreen-enabled: true;
+$fullhd-enabled: true;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "bulma/utilities/_all.scss";
+@import "bulma/base/_all.scss";
+@import "bulma/components/_all.scss";
+@import "bulma/elements/_all.scss";
+@import "bulma/form/_all.scss";
+@import "bulma/grid/_all.scss";
+@import "bulma/layout/_all.scss";
+@import "bulma/pages/_all.scss";

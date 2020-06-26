@@ -1,5 +1,5 @@
 $body-background-color: $scheme-main !default;
-$body-size: 16px !default;
+$body-size: 15px !default;
 $body-min-width: 300px !default;
 $body-rendering: optimizeLegibility !default;
 $body-family: $family-primary !default;
@@ -61,7 +61,7 @@ textarea {
 
 body {
   color: $body-font-color-dark;
-  font-size: $body-font-size;
+ // font-size: $body-font-size;
   font-weight: $body-weight;
   line-height: $body-line-height;
 }
@@ -182,8 +182,4 @@ table {
 h1, h2, h3, h4, h5, h6 {
   font-weight: $title-font-weight;
   font-family: $title-font-family;
-}
-
-a {
-  color: blue;
 }

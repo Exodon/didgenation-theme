@@ -1,12 +1,13 @@
-$footer-background-color: $scheme-main-bis !default;
-$footer-color: false !default;
-$footer-padding: 3rem 1.5rem 6rem !default;
-
 .footer {
-  background-color: $footer-background-color;
-  padding: $footer-padding;
+  background-color: $grey-light;
 
-  @if $footer-color {
-    color: $footer-color;
+  .footer-primary {
+    background-color: $grey-lightest;
+    padding-top: 2rem;
+  }
+
+  .footer-secondary {
+    background-color: $grey-lighter;
+    padding-bottom: 2rem;
   }
 }
