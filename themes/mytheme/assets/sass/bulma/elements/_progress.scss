@@ -1,6 +1,5 @@
 $progress-bar-background-color: $border-light !default;
 $progress-value-background-color: $text !default;
-
 $progress-indeterminate-duration: 1.5s !default;
 
 .progress {
@@ -13,6 +12,7 @@ $progress-indeterminate-duration: 1.5s !default;
   overflow: hidden;
   padding: 0;
   width: 100%;
+  border: 1px solid $grey-light;
 
   &::-webkit-progress-bar {
     background-color: $progress-bar-background-color;
@@ -32,7 +32,8 @@ $progress-indeterminate-duration: 1.5s !default;
   }
 
   // Colors
-  @each $name, $pair in $colors {
+  @each $name,
+  $pair in $colors {
     $color: nth($pair, 1);
 
     &.is-#{$name} {

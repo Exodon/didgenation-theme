@@ -5,15 +5,16 @@ is_hidden = 0
 
 [poll homeA]
 poll-reference = "poll-home-1"
-
-[poll homeB]
-poll-reference = "poll-home-2"
 ==
 <!-- Slider -->
-{% partial 'home/home-swiper' %}
-
-<!-- Poll & Quiz -->
-{% partial 'home/poll-quiz' %}
+<div class="columns">
+	<div class="column is-9">
+		{% partial 'home/home-swiper' %}
+	</div>
+	<div class="column is-3">
+		{% partial 'home/poll-quiz' %}
+	</div>
+</div>
 
 <!-- News Trending -->
 {% partial 'home/home-news-trending' %}
