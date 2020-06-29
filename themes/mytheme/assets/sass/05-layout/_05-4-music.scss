@@ -8,11 +8,6 @@
   position: relative;
   padding-top: $global-gutter-small;
 
-  .title-holder {
-    left: -116px;
-    top: -144px;
-  }
-
   .cd-month {
     position: relative;
 
@@ -28,6 +23,17 @@
 
   .cd-list {
     flex-flow: column;
+  }
+
+  .columns {
+    .cd-list-item {
+      &:last-child {
+        .media {
+					padding-bottom: 0;
+					border: 0;
+				}
+      }
+    }
   }
 }
 
@@ -52,15 +58,6 @@
 // ==================================================
 // Post Music
 // ==================================================
-.is_music-post {
-  .post-image {
-    figure {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-}
-
 
 .is_music-category {
   .block-articles {
@@ -69,20 +66,20 @@
       display: none;
     }
 
-		.columns {
-			flex-wrap: wrap;
-		}
+    .columns {
+      flex-wrap: wrap;
+    }
 
-		.column {
-			flex-basis: percentage(1/4);
+    .column {
+      flex-basis: percentage(1/4);
 
-			.date {
-				display: none;
-			}
+      .date {
+        display: none;
+      }
 
-			.title {
-				font-size: 1.5rem;
-			}
-		}
-	}
+      .title {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }

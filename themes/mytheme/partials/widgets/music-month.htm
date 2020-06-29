@@ -1,4 +1,4 @@
-[blogPosts]
+[blogPosts musicmonth]
 pageNumber = "{{ :page }}"
 categoryFilter = "music-month"
 postsPerPage = 1
@@ -10,7 +10,7 @@ postPage = "music/post"
 
 <!-- Musicography Cd of the Month -->
 <h3 class="title has-text-centered is-size-4">Album of the Month</h3>
-{% for post in posts %}
+{% for post in musicmonth.posts %}
 	{% set image = post.featured_images.first %}
 		<figure class="image is-square">
 			<a href="{{ post.url }}"><img src="{{ image.path }}" alt="{{ post.title }}" /></a>

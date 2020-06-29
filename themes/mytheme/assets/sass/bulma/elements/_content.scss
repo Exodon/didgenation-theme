@@ -21,7 +21,7 @@ $content-table-foot-cell-color: $text-strong !default;
   @extend %block;
 
   // Inline
-  li + li {
+  li+li {
     margin-top: 0.25em;
   }
 
@@ -93,8 +93,36 @@ $content-table-foot-cell-color: $text-strong !default;
 
   blockquote {
     background-color: $content-blockquote-background-color;
-    border-left: $content-blockquote-border-left;
     padding: $content-blockquote-padding;
+    quotes: "\201C""\201D""\2018""\2019";
+    line-height: 40px;
+    max-width: 80%;
+    margin: 30px auto;
+		font-size: 1.5em;
+		font-family: serif;
+
+		&:before,
+		&:after {
+			color: $gray;
+			font-size: 4em;
+			line-height: 0.1em;
+		}
+
+		&:before {
+			content: open-quote;
+			margin-right: 0.25em;
+			vertical-align: -0.4em;
+		}
+
+		&:after {
+			content: close-quote;
+			vertical-align: -0.5em;
+			margin-left: 0.25em;
+		}
+
+		p {
+			display: inline;
+		}
   }
 
   ol {
@@ -143,8 +171,6 @@ $content-table-foot-cell-color: $text-strong !default;
   }
 
   figure {
-    margin-left: 2em;
-    margin-right: 2em;
     text-align: center;
 
     &:not(:first-child) {
@@ -198,6 +224,7 @@ $content-table-foot-cell-color: $text-strong !default;
     }
 
     thead {
+
       td,
       th {
         border-width: $content-table-head-cell-border-width;
@@ -206,6 +233,7 @@ $content-table-foot-cell-color: $text-strong !default;
     }
 
     tfoot {
+
       td,
       th {
         border-width: $content-table-foot-cell-border-width;
@@ -216,6 +244,7 @@ $content-table-foot-cell-color: $text-strong !default;
     tbody {
       tr {
         &:last-child {
+
           td,
           th {
             border-bottom-width: 0;
@@ -226,7 +255,7 @@ $content-table-foot-cell-color: $text-strong !default;
   }
 
   .tabs {
-    li + li {
+    li+li {
       margin-top: 0;
     }
   }

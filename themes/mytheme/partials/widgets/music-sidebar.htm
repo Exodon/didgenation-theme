@@ -1,4 +1,4 @@
-[blogPosts]
+[blogPosts musicLatest]
 pageNumber = "{{ :page }}"
 categoryFilter = "music"
 postsPerPage = 5
@@ -12,25 +12,23 @@ postPage = "music/post"
 <div class="widget-music">
 	<h3 class="title has-text-centered is-size-4">Latest Cd´s</h3>
 	<div class="columns cd-list">
-		{% for post in posts %}
+		{% for post in musicLatest.posts %}
 		{% set image = post.featured_images.first %}
 		<div class="column cd-list-item">
 			<article class="media">
-				<a href="{{ post.url }}">
-					<figure class="media-left">
+				<a class="media-left" href="{{ post.url }}">
+					<figure>
 						<p class="image is-96x96">
 							<img src="{{ image.path }}" alt="{{ post.title }}" />
 						</p>
 					</figure>
 				</a>
-				<div class="media-right">
+				<div class="media-content">
 					<div class="content">
-						<h1 class="title is-size-5">
+						<h1 class="title is-size-6">
 							<a href="{{ post.url }}">{{ post.title }}</a>
 						</h1>
-						<h2 class="subtitle is-size-6 has-text-weight-normal is-italic">
-							{{ post.excerpt|raw }}
-						</h2>
+						<p class="subtitle is-size-6 is-italic">{{ post.excerpt|raw }}</p>
 					</div>
 				</div>
 			</article>

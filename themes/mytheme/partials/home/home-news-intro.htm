@@ -1,15 +1,15 @@
 [blogPosts]
 pageNumber = "{{ :page }}"
-categoryFilter = "news"
+categoryFilter = "articles-month"
 postsPerPage = 3
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "blog/category"
 postPage = "blog/post"
 ==
-<div class="block-articles is-intro">
+<div class="block-articles is-month">
   <div class="title-holder">
-    <span class="title-holder-definition">News</span>
+    <span class="title-holder-definition">Articles of the Month</span>
   </div>
   <div class="columns">
     {% for post in posts %}

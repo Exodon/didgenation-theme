@@ -1,6 +1,5 @@
 $progress-bar-background-color: $border-light !default;
 $progress-value-background-color: $text !default;
-$progress-border-radius: $radius-rounded !default;
 
 $progress-indeterminate-duration: 1.5s !default;
 
@@ -9,8 +8,6 @@ $progress-indeterminate-duration: 1.5s !default;
 
   -moz-appearance: none;
   -webkit-appearance: none;
-  border: none;
-  border-radius: $progress-border-radius;
   display: block;
   height: $size-normal;
   overflow: hidden;

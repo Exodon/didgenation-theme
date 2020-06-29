@@ -5,183 +5,181 @@
 
 
 .block-articles {
-    margin-top: 20px;
+  margin-top: 20px;
+  position: relative;
+  margin-bottom: 40px;
+
+  .date {
+    font-size: 14px;
+  }
+
+  .card-content {
     position: relative;
-    margin-bottom: 40px;
+  }
 
-    .date {
-        font-size: 14px;
+  .card-image {
+    overflow: hidden;
+
+    .image {
+      transition: transform 1s;
+
+      &:hover {
+        transform: translate3d(0, 0, 0) scale(1.06)
+      }
     }
+  }
 
-    .card-content {
-        position: relative;
+  .category-holder {
+    position: absolute;
+    top: -15px;
+    left: -1px;
+    line-height: 23px;
+    padding: 0 20px;
+    background: #e7e7e7;
+    transition: padding .35s cubic-bezier(.25, .04, 0, .93);
+
+    .category-holder-title {
+      font-family: $title-font-family;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 12px;
+      text-align: center;
+      min-width: 150px;
     }
+  }
 
-    .card-image {
-        overflow: hidden;
+  // Overwrite
+  .card {
+    height: 100%;
+  }
 
-        .image {
-            transition: transform 1s;
+  .image img {
+    object-fit: cover; // maybe change this later to image background
+  }
 
-            &:hover {
-                transform: translate3d(0, 0, 0) scale(1.06)
-            }
-        }
+  &.is-month {
+
+    //increase the size of the second column
+    .column {
+      &:nth-child(2) {
+        flex: none;
+        width: 40%;
+      }
     }
 
     .category-holder {
-        position: absolute;
-        top: -15px;
-        left: -1px;
-        line-height: 23px;
-        padding: 0 20px;
-        background: #e7e7e7;
-        transition: padding .35s cubic-bezier(.25, .04, 0, .93);
+			display: none;
+		}
+  }
 
-        .category-holder-title {
-            font-family: $title-font-family;
-            text-transform: uppercase;
-            letter-spacing: .2em;
-            font-size: 12px;
-            text-align: center;
-            min-width: 150px;
-        }
-    }
+  &.is-trending {
 
-    // Overwrite
     .card {
-        height: 100%;
+      border: 0;
+      border-left: $global-border;
+      box-shadow: none;
     }
 
-    .image img {
-        object-fit: cover; // maybe change this later to image background
+    .title {
+      font-size: 20px;
+    }
+  }
+
+  &.is-community {
+    .columns {
+      height: 100%
     }
 
-    &.is-intro {
-
-        //increase the size of the second column
-        .column {
-            &:nth-child(2) {
-                flex: none;
-                width: 40%;
-            }
-        }
+    .is-ff-column {
+      flex-flow: column;
+      height: 100%;
     }
 
-    &.is-trending {
+    .is-ff-wrap {
+      flex-flow: wrap;
 
-        .card {
-            border: 0;
-            border-left: $global-border;
-            box-shadow: none;
+      .column {
+        &:nth-child(1) {
+          flex: none;
+          width: 100%;
         }
-
-        .title {
-            font-size: 20px;
-        }
+      }
     }
 
-    &.is-community {
-        .columns {
-            height: 100%
-        }
-
-        .is-ff-column {
-            flex-flow: column;
-            height: 100%;
-        }
-
-        .is-ff-wrap {
-            flex-flow: wrap;
-
-            .column {
-                &:nth-child(1) {
-                    flex: none;
-                    width: 100%;
-                }
-            }
-        }
-
-        .is-full-column {
-            flex: none;
-            min-width: 100%
-        }
-
-        .is-one-quarter {
-            .image {
-                padding-top: 240%;
-            }
-        }
+    .is-full-column {
+      flex: none;
+      min-width: 100%
     }
 
-    &.is-swiper {
-        .column {
-            padding: 0
-        }
-
-        .image {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: left center;
-        }
-
-        .card-content {
-            position: absolute;
-            background: white;
-            padding: 40px;
-            top: 50%;
-            left: 40px;
-            transform: translateY(-50%);
-            max-width: 300px;
-            border: 2px solid #efefef;
-        }
-
-        //.swiper-container
-
-        // Swiper Home @page
-        .swiper-container {
-            width: 100%;
-            height: 500px;
-        }
-
-        .swiper-slide {
-            font-size: 18px;
-
-            /* Center slide text vertically */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .swiper-pagination {
-            bottom: 0;
-            background: white;
-        }
+    .is-one-quarter {
+      .image {
+        padding-top: 240%;
+      }
     }
+  }
+
+  &.is-swiper {
+    .column {
+      padding: 0
+    }
+
+    .image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+    }
+
+    .card-content {
+      position: absolute;
+      background: white;
+      padding: 40px;
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
+      max-width: 300px;
+      border: 2px solid #efefef;
+    }
+
+    //.swiper-container
+
+    // Swiper Home @page
+    .swiper-container {
+      width: 100%;
+      height: 500px;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-pagination {
+      bottom: 0;
+      background: white;
+    }
+  }
 }
 
 
 .title-holder {
-    position: absolute;
-    left: -65px;
-    top: -80px;
-    width: auto;
-    margin: 0;
-    transform: rotate(-90deg) translateX(-100%) translateY(-100%);
-    background: #f8f8f8;
+  background: rgba(248, 248, 248, 0.5);
+  margin-bottom: 1rem;
+  border-left: 10px solid #d9b6a9;
 }
 
 // Title holder for the blocks
 .title-holder-definition {
-    padding: 5px;
-    display: inline-block;
-    margin: 0;
-    font-family: $title-font-family;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: #707070;
-    min-width: 150px;
-    text-align: center;
+  padding: 10px;
+  display: inline-block;
+  margin: 0;
+  font-family: $title-font-family;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #707070;
+  text-align: center;
 }
