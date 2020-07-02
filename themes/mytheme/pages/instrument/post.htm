@@ -1,20 +1,13 @@
-title = "Blog Post"
-url = "/article/:slug"
+title = "Didgeridoo Show Room"
+url = "/instrument/:slug"
 layout = "post"
-description = "Viewing a single blog post"
+description = "Viewing a single Instrument Post"
 is_hidden = 0
 
 [blogPost]
 slug = "{{ :slug }}"
-categoryPage = "blog/category"
+categoryPage = "instrument/category"
 
-[userProfile]
-user_slug = "{{ :user-slug }}"
-
-[timeToRead]
-postSlug = "{{ :slug }}"
-readingSpeed = 300
-isRoundingUpEnabled = 1
 ==
 <?php
 function onEnd()
@@ -31,40 +24,37 @@ function onEnd()
 {% set image = post.featured_images.first %}
 {% set nextPost = blogPost.nextPost %}
 {% set lastPost = blogPost.previousPost %}
-{% set author = post.getAuthor() %}
 
 <!-- Excerpt Post Section -->
 <div class="content">
-
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-	<h1 class="title">{{ post.title }} <span class="tag">{% component 'timeToRead' %}</span></h1>
-	<h2 class="subtitle is-5">by
-		<small class="subtitle is-size-6 is-italic">
-			<a class="is-underline" href="{{ 'profile'|page({'user-slug':post.getAuthor().ideaverum_blogtoolbox_user_slug }) }}">{{ post.getAuthor().first_name }} {{ post.getAuthor().last_name }}</a>
-		</small>
-	</h2>
-	<div class="intro">
+	<h1 class="title is-size-4">
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</h1>
+	<h2 class="subtitle is-size-5 has-text-weight-normal is-italic">
 		{{ post.excerpt|raw }}
-	</div>
+	</h2>
 </div>
 
 <!-- Beginning of the Post -->
-
 <article class="content">
-	<header class="post-image">
-		{% if image %}
-			<figure class="image is-1by1 is-image-cover as-center">
-				<img src="{{ image.path }}" alt="{{ post.title }}" />
-			</figure>
-		{% endif %}
-	</header>
-
-	<div class="content">
-		{{ post.content_html|raw }}
+	<div class="columns is-vcentered">
+		<div class="column">
+			<header class="post-image">
+			{% if image %}
+				<figure class="image is-1by2 is-image-cover as-center">
+					<img src="{{ image.path }}" alt="{{ post.title }}" />
+				</figure>
+			{% endif %}
+			</header>
+		</div>
+		<div class="column">
+			<div class="content">
+				{{ post.content_html|raw }}
+			</div>
+		</div>
 	</div>
-
 	<footer>
-		<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
 		{% if post.categories.count %} in
 		<span class="tag is-medium">
 			{% for category in post.categories %}
@@ -74,11 +64,6 @@ function onEnd()
 		{% endif %}
 	</footer>
 </article>
-
-<!-- Author Section -->
-<div class="block-author">
-	{% partial 'widgets/author' %}
-</div>
 
 <!-- Next / Previous Post Navigation -->
 <div class="block-post-navigation">

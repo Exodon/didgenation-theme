@@ -67,8 +67,8 @@
     }
 
     .category-holder {
-			display: none;
-		}
+      display: none;
+    }
   }
 
   &.is-trending {
@@ -165,9 +165,44 @@
 
 
 .title-holder {
-  background: rgba(248, 248, 248, 0.5);
-  margin-bottom: 1rem;
-  border-left: 10px solid #d9b6a9;
+  background: rgba(248, 248, 248, 0.7);
+	margin-bottom: 1rem;
+	border-left: 13px solid $gray;
+	border-radius: 0 50px 0 0;
+
+  .block-music & {
+    border-color: $cat-music;
+  }
+
+  .is-trending & {
+    border-color: $cat-trending;
+  }
+
+  .is-month & {
+    border-color: $cat-month;
+  }
+
+  .is-swiper & {
+    border-color: $cat-slider;
+  }
+
+  .is-community & {
+    border-color: $cat-community;
+	}
+
+  .is-opinion & {
+    border-color: $cat-opinion;
+	}
+
+  .is-about & {
+    border-color: $cat-about;
+  }
+}
+
+.is-about {
+	.button {
+		margin-top: 1.5rem;
+	}
 }
 
 // Title holder for the blocks
@@ -182,3 +217,4 @@
   color: #707070;
   text-align: center;
 }
+

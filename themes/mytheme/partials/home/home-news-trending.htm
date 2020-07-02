@@ -1,4 +1,4 @@
-[blogPosts]
+[blogPosts trending]
 pageNumber = "{{ :page }}"
 postsPerPage = 5
 noPostsMessage = "No posts found"
@@ -8,10 +8,10 @@ postPage = "blog/post"
 ==
 <div class="block-articles is-trending">
   <div class="title-holder">
-    <span class="title-holder-definition">Trending</span>
+    <span class="title-holder-definition">Trending Articles</span>
   </div>
   <div class="columns">
-    {% for post in posts %}
+    {% for post in trending.posts %}
       {% partial 'blog/post-cat-trending' post=post %}
     {% endfor %}
   </div>

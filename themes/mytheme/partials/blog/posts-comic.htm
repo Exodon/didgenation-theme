@@ -1,0 +1,25 @@
+{% set posts = blogPosts.posts %}
+
+<div class="columns">
+    {% for post in posts %}
+        {% partial 'blog/post-comic' post=post %}
+    {% endfor %}
+</div>
+
+<nav class="pagination is-rounded" role="navigation" aria-label="pagination">
+	{% if posts.lastPage > 1 %}
+		{% if posts.currentPage > 1 %}
+			<a class="pagination-previous" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}" class="pagination-prev">Previous</a>
+		{% endif %}
+		{% if posts.lastPage > posts.currentPage %}
+			<a class="pagination-next" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}" class="pagination-next">Next</a>
+		{% endif %}
+        <ul class="pagination-list">
+            {% for page in 1..posts.lastPage %}
+                <li>
+                    <a class="pagination-link {{ posts.currentPage == page ? 'is-current' : null }}" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</nav>

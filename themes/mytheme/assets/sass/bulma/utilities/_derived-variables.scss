@@ -8,6 +8,8 @@ $danger: $red !default;
 $light: $white-ter !default;
 $dark: $grey-darker !default;
 
+
+
 // Invert colors
 
 $orange-invert: findColorInvert($orange) !default;
@@ -70,7 +72,7 @@ $pre-background: $background !default;
 
 // Link colors
 
-$link: $grey !default; 
+$link: $grey !default;
 $link-invert: findColorInvert($link) !default;
 $link-light: findLightColor($link) !default;
 $link-dark: findDarkColor($link) !default;

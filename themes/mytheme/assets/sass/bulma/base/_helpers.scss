@@ -467,3 +467,8 @@ $displays: "block" "flex" "inline" "inline-block" "inline-flex";
 .is-relative {
   position: relative !important;
 }
+
+.is-ff-column {
+	flex-flow: column;
+}
+

@@ -18,7 +18,9 @@
 // ==================================================
 // Category Music
 // ==================================================
-.is_music-category{
+.is_music-category,
+.is_instrument-category,
+.is_comic-category {
 
   .hero {
     background-image: url("../images/bg/bg-2.jpg");

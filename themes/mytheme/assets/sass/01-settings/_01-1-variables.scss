@@ -8,8 +8,10 @@
 // ==================================================
 // Font Family
 // ==================================================
-$montserrat: "Montserrat",sans-serif;
-$muli: "Muli",sans-serif;
+$montserrat: "Montserrat",
+sans-serif;
+$muli: "Muli",
+sans-serif;
 
 // ==================================================
 // Colors : Names from : http://chir.ag/projects/name-that-color
@@ -30,6 +32,17 @@ $gray-dark: #7a7a7a;
 // ==================================================
 $brand-theme-active: $black;
 $brand-theme-passive: $gray;
+
+// ==================================================
+// Category Colors
+// ==================================================
+$cat-slider : #111d5e;
+$cat-opinion : #c70039;
+$cat-trending : #f37121;
+$cat-month : #ffbd69;
+$cat-community : #27abdf;
+$cat-music : #BCC138;
+$cat-about : #c1388c;
 
 // ==================================================
 // Global Variables

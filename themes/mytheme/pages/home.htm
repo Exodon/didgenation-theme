@@ -11,8 +11,15 @@ poll-reference = "poll-home-1"
 	<div class="column is-9">
 		{% partial 'home/home-swiper' %}
 	</div>
-	<div class="column is-3">
-		{% partial 'home/poll-quiz' %}
+	<div class="column">
+		<div class="columns is-ff-column">
+			<div class="column is-opinion">
+				{% partial 'home/poll' %}
+			</div>
+			<div class="column is-about">
+				{% partial 'home/about' %}
+			</div>
+		</div>
 	</div>
 </div>
 

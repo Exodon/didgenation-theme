@@ -1,20 +1,53 @@
+[blogPosts instrument]
+pageNumber = "{{ :page }}"
+categoryFilter = "instrument"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "instrument/category"
+postPage = "instrument/post"
+
+[blogPosts comic]
+pageNumber = "{{ :page }}"
+categoryFilter = "comic"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "comic/category"
+postPage = "comic/post"
+
+[blogPosts video]
+pageNumber = "{{ :page }}"
+categoryFilter = "video"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "video/category"
+postPage = "video/post"
+==
+
 <div class="block-articles is-community">
   <div class="title-holder">
     <span class="title-holder-definition">Community</span>
   </div>
-
   <div class="columns">
-    <div class="column is-one-quarter">
-        {% partial 'home/community/post-cat-community-1' %}
+    <div class="column">
+			{% for post in instrument.posts %}
+				{% partial 'blog/post-instrument' post=post %}
+			{% endfor %}
     </div>
     <div class="column">
-      <div class="columns is-ff-column">
-        {% partial 'home/community/post-cat-community-2' %}
+      <div class="columns">
+				{% for post in comic.posts %}
+					{% partial 'blog/post-comic' post=post %}
+				{% endfor %}
       </div>
     </div>
     <div class="column">
-      <div class="columns is-ff-wrap">
-        {% partial 'home/community/post-cat-community-3' %}
+      <div class="columns">
+					{% for post in video.posts %}
+						{% partial 'blog/post-video' post=post %}
+					{% endfor %}
       </div>
     </div>
   </div>

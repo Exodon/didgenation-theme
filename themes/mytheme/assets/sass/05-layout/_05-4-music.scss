@@ -29,9 +29,9 @@
     .cd-list-item {
       &:last-child {
         .media {
-					padding-bottom: 0;
-					border: 0;
-				}
+          padding-bottom: 0;
+          border: 0;
+        }
       }
     }
   }
@@ -71,7 +71,6 @@
     }
 
     .column {
-      flex-basis: percentage(1/4);
 
       .date {
         display: none;

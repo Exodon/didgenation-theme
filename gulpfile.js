@@ -1,7 +1,7 @@
 // VARIABLES & PATHS
 
 let localhost    = 'http://localhost:88/dn-project', // Local domain, can change dependent on your private instalation
-    preprocessor = 'scss', // Preprocessor (sass, scss, less, styl) / Preprocessor folder name / Module require const name. Example: themes/mytheme/assets/scss/
+    preprocessor = 'sass', // Preprocessor (sass, scss, less, styl) / Preprocessor folder name / Module require const name. Example: themes/mytheme/assets/scss/
     theme        = 'mytheme', // Theme folder name
     fileswatch   = 'html,htm,php,txt,yaml,twig,json,md', // List of files extensions for watching & hard reload (comma separated)
     online       = true; // If «false» - Browsersync will work offline without internet connection
@@ -62,7 +62,6 @@ function browsersync() {
 
 function scripts() {
 	return src(paths.scripts.src)
-	.pipe(sourcemaps.init())
 	.pipe(concat('theme.min.js'))
 	.pipe(uglify())
 	.pipe(dest('themes/' + theme + '/assets/js'))
@@ -71,14 +70,13 @@ function scripts() {
 
 function styles() {
 	return src('themes/' + theme + '/assets/' + preprocessor + '/main.*')
-	.pipe(sourcemaps.init())
 	.pipe(eval(preprocessor)())
 	.pipe(concat('theme.min.css'))
-	.pipe(sourcemaps.write({includeContent: false}))
-    .pipe(sourcemaps.init({loadMaps: true}))
+	//.pipe(sourcemaps.write({includeContent: false}))
+    //.pipe(sourcemaps.init({loadMaps: true}))
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
-	.pipe(sourcemaps.write('.'))
+	//.pipe(sourcemaps.write('.'))
 	.pipe(dest('themes/' + theme + '/assets/css'))
 	.pipe(browserSync.stream())
 }

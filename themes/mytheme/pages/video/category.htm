@@ -1,7 +1,7 @@
-title = "Didgeridoo Musicography"
-url = "/music/list/:slug/:page?"
+title = "Video List"
+url = "/video/list/:slug/:page?"
 layout = "category"
-description = "Viewing Didgeridoo Musicography Index"
+description = "Viewing Video List"
 hidden = "0"
 
 [blogPosts]
@@ -10,13 +10,13 @@ categoryFilter = "{{ :slug }}"
 postsPerPage = "10"
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
-categoryPage = "music/category"
-postPage = "music/post"
+categoryPage = "video/category"
+postPage = "video/post"
 
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = "0"
-categoryPage = "music/category"
+categoryPage = "video/category"
 
 ==
 <?php
@@ -40,10 +40,8 @@ function onEnd()
     </div>
   </div>
 </section>
-<div class="container">
-	{% partial 'widgets/music' %}
-</div>
+
 <div class="block-articles">
-	<h2 class="title is-size-3 has-text-centered">Didgeridoo Musicography List</h2>
-  {% partial 'blog/posts-music' %}
+	<h2 class="title is-size-3 has-text-centered">Videos Index</h2>
+  {% partial 'blog/posts-video' %}
 </div>
