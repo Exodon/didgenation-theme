@@ -1,6 +1,6 @@
 title = "Comic Show Room"
 url = "/comic/:slug"
-layout = "post"
+layout = "comic"
 description = "Viewing a single Comic Post"
 is_hidden = 0
 
@@ -28,6 +28,13 @@ function onEnd()
 <!-- Excerpt Post Section -->
 <div class="content">
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
+	{% if post.categories.count %} in category
+	<span class="tag">
+		{% for category in post.categories %}
+		<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+		{% endfor %}
+	</span>
+	{% endif %}
 	<h1 class="title is-size-4">
 		<a href="{{ post.url }}">{{ post.title }}</a>
 	</h1>
@@ -55,7 +62,7 @@ function onEnd()
 		</div>
 	</div>
 	<footer>
-		{% if post.categories.count %} in
+		{% if post.categories.count %} in category
 		<span class="tag is-medium">
 			{% for category in post.categories %}
 			<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}

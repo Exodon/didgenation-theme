@@ -1,12 +1,12 @@
-title = "video Show Room"
-url = "/video :slug"
+title = "Video Show Room"
+url = "/video/:slug"
 layout = "post"
 description = "Viewing a single video Post"
 is_hidden = 0
 
 [blogPost]
 slug = "{{ :slug }}"
-categoryPage = "video category"
+categoryPage = "video/category"
 
 ==
 <?php
@@ -28,6 +28,13 @@ function onEnd()
 <!-- Excerpt Post Section -->
 <div class="content">
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
+	{% if post.categories.count %} in category
+		<span class="tag">
+			{% for category in post.categories %}
+			<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+			{% endfor %}
+		</span>
+	{% endif %}
 	<h1 class="title is-size-4">
 		<a href="{{ post.url }}">{{ post.title }}</a>
 	</h1>
@@ -40,7 +47,7 @@ function onEnd()
 <article class="content">
 	{{ post.content_html|raw }}
 	<footer>
-		{% if post.categories.count %} in
+		{% if post.categories.count %} in category
 		<span class="tag is-medium">
 			{% for category in post.categories %}
 			<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}

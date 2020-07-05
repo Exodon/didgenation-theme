@@ -37,6 +37,13 @@ function onEnd()
 <div class="content">
 
 	<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
+	{% if post.categories.count %} in category
+	<span class="tag">
+		{% for category in post.categories %}
+		<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+		{% endfor %}
+	</span>
+	{% endif %}
 	<h1 class="title">{{ post.title }} <span class="tag">{% component 'timeToRead' %}</span></h1>
 	<h2 class="subtitle is-5">by
 		<small class="subtitle is-size-6 is-italic">
@@ -53,7 +60,7 @@ function onEnd()
 <article class="content">
 	<header class="post-image">
 		{% if image %}
-			<figure class="image is-1by1 is-image-cover as-center">
+			<figure class="image is-3by1 is-image-cover as-top">
 				<img src="{{ image.path }}" alt="{{ post.title }}" />
 			</figure>
 		{% endif %}
@@ -65,7 +72,7 @@ function onEnd()
 
 	<footer>
 		<span class="tag">{{ post.published_at|date('M d, Y') }}</span>
-		{% if post.categories.count %} in
+		{% if post.categories.count %} in category
 		<span class="tag is-medium">
 			{% for category in post.categories %}
 			<a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
