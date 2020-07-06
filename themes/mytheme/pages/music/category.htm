@@ -1,13 +1,13 @@
 title = "Didgeridoo Musicography"
 url = "/music/list/:slug/:page?"
-layout = "category"
+layout = "music"
 description = "Viewing Didgeridoo Musicography Index"
 hidden = "0"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "{{ :slug }}"
-postsPerPage = "10"
+postsPerPage = "9"
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "music/category"
@@ -40,9 +40,6 @@ function onEnd()
     </div>
   </div>
 </section>
-<div class="container">
-	{% partial 'widgets/music' %}
-</div>
 <div class="block-articles">
 	<h2 class="title is-size-3 has-text-centered">Didgeridoo Musicography List</h2>
   {% partial 'blog/posts-music' %}
