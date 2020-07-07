@@ -1,22 +1,22 @@
-title = "Didgeridoo Musicography"
-url = "/music/list/:slug/:page?"
-layout = "music"
-description = "Viewing Didgeridoo Musicography Index"
+title = "Didgeridoo Events"
+url = "/events/list/:slug/:page?"
+layout = "event"
+description = "Viewing Didgeridoo Events List"
 hidden = "0"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-categoryFilter = "music"
+categoryFilter = "events"
 postsPerPage = "9"
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
-categoryPage = "music/category"
-postPage = "music/post"
+categoryPage = "event/category"
+postPage = "event/post"
 
 [blogCategories]
 slug = "{{ :slug }}"
 displayEmpty = "0"
-categoryPage = "music/category"
+categoryPage = "event/category"
 
 ==
 <?php
@@ -41,6 +41,6 @@ function onEnd()
   </div>
 </section>
 <div class="block-articles">
-	<h2 class="title is-size-3 has-text-centered">Didgeridoo Musicography List</h2>
-  {% partial 'blog/posts-music' %}
+	<h2 class="title is-size-3 has-text-centered">Didgeridoo Events List</h2>
+  {% partial 'blog/posts-event' %}
 </div>

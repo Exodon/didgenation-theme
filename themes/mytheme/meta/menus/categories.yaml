@@ -1,2 +1,75 @@
-name: categories
-items: {  }
+name: Categories
+items:
+    -
+        title: Education
+        nesting: '0'
+        type: blog-category
+        url: ''
+        code: ''
+        reference: '24'
+        cmsPage: blog/category
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Culture
+        nesting: '0'
+        type: blog-category
+        code: ''
+        reference: '26'
+        cmsPage: blog/category
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Events
+        type: cms-page
+        code: ''
+        reference: event/category
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Comics
+        type: cms-page
+        code: ''
+        reference: comic/category
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Instruments
+        type: cms-page
+        code: ''
+        reference: instrument/category
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Articles of the Month'
+        nesting: '0'
+        type: blog-category
+        code: ''
+        reference: '60'
+        cmsPage: blog/category
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Video
+        type: cms-page
+        code: ''
+        reference: video/category
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

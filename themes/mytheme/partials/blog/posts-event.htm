@@ -1,0 +1,11 @@
+{% set posts = blogPosts.posts %}
+
+{% partial 'site/pagination' %}
+
+<div class="columns">
+    {% for post in posts %}
+        {% partial 'blog/post-event' post=post %}
+    {% endfor %}
+</div>
+
+{% partial 'site/pagination' %}

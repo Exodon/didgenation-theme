@@ -1,0 +1,29 @@
+{% set image = post.featured_images.first %}
+<div class="column is-one-third">
+  <article class="card">
+          <div class="card-image">
+              <a href="{{ post.url }}">
+                <figure class="image is-3by2">
+                  <img src="{{ image.path }}" alt="{{ post.title }}" />
+                </figure>
+              </a>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <h3 class="title is-size-4"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+              </div>
+            </div>
+            <div class="content">
+              {{ post.summary|raw }}
+            </div>
+            {% if post.categories.count %}
+            <div class="category-holder">
+              {% for category in post.categories %}
+              <a class="category-holder-title" href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+  </article>
+</div>
