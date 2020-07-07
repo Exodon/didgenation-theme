@@ -1,0 +1,46 @@
+description = "Instrument Page Layout"
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<!DOCTYPE html>
+
+<html lang="eng">
+
+<head>
+	{% partial 'site/meta' %}
+</head>
+
+<body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
+
+	<!-- Header -->
+	<header class="header">
+		{% partial 'site/header' %}
+	</header>
+
+	<div class="container">
+		<div class="columns">
+			<!-- Content -->
+			<section class="column">
+				{% page %}
+			</section>
+
+			<!-- Sidebar -->
+			<aside class="column is-3 sidebar">
+				{% partial 'site/sidebar-instrument' %}
+			</aside>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		{% partial 'site/footer' %}
+	</footer>
+
+
+	<!-- Scripts -->
+	{% partial 'site/scripts' %}
+</body>
+
+</html>
