@@ -121,3 +121,50 @@ $btn-font-weight: 600;
 $btn-small-padding: 2px 8px;
 $btn-normal-padding: 12px 8px;
 $btn-opacity-over: 0.7;
+
+
+// ======================================
+// Breakpoints System
+// ======================================
+
+// Smaller mobile resolution
+$xs: "screen and (max-width: 375px)";
+
+// Mobile. Mobile is already default but you might need this breakpoint for show/hide functionality
+$s: "screen and (max-width: 767px)";
+
+// Tablet up (so incl. mobile)
+$m: "screen and (min-width: 768px)";
+
+// mobile and tablet only.
+$s-m: "screen and (max-width:1024px)";
+
+// mobile until destktop XL;.
+$s-xl: "screen and (max-width:1200px)";
+
+// Tablet only.
+$m-t: "screen and (min-width: 768px) and (max-width:1024px)";
+
+// Tablet portrait only.
+$t-only: "screen and (min-width: 768px) and (max-width:1024px) and (orientation: portrait)";
+
+// Tablet portrait xl only ( this breakpoint was needed to fix the problem of the navigation in big tablets)
+$t-only-xl: "screen and (min-width: 1024px) and (orientation: portrait)";
+
+// Tablet to desktop medium only.
+$m-xl: "screen and (min-width: 768px) and (max-width:1199px)";
+
+// Desktop up
+$l: "screen and (min-width: 1025px)";
+
+// Desktop medium
+$xl: "screen and (min-width: 1200px)";
+
+// Desktop above content width
+$xxl: "screen and (min-width: 1600px)";
+
+// Desktop medium only.
+$xl-xxl: "screen and (min-width: 1200px) and (max-width:1599px)";
+
+// IE 11 Exceptions
+$ie11: "screen and (-ms-high-contrast: active), (-ms-high-contrast: none)";

@@ -8,4 +8,52 @@
 // ==================================================
 .footer {
   margin-top: $global-gutter;
+  position: relative;
+}
+
+.footer-wave {
+  margin-bottom: -20px;
+  background: $global-component-background-light;
+
+  @include bp($m) {
+    margin-bottom: -60px;
+  }
+}
+
+.footer-primary {
+  position: relative;
+}
+
+
+// ==================================================
+// Gif Animator
+// ==================================================
+.ridoo {
+  background-image: url("../images/mix/ridoo.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -15%;
+  position: absolute;
+  height: 80px;
+  width: 100px;
+
+  @include bp($m) {
+    top: -101px;
+  }
+
+  @include bp($l) {
+    top: -80px;
+  }
+
+  @include bp($xl) {
+    top: -140px;
+  }
+
+  @include bp($xxl) {
+    top: -170px;
+  }
+
 }
