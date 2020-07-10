@@ -4,6 +4,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	 * @function
 	 * @description Swiper Home Page
 	 */
+	var $navbar = $('[data-js="navbar"]'),
+		y_pos = $navbar.offset().top,
+		height = $navbar.height();
+
+	$(document).scroll(function () {
+		var scrollTop = $(this).scrollTop();
+
+		if (scrollTop > y_pos + height) {
+			$navbar.addClass("is-fixed").animate({
+				top: 0
+			});
+		} else if (scrollTop <= y_pos) {
+			$navbar.removeClass("is-fixed").clearQueue().animate({
+				top: "-48px"
+			}, 0);
+		}
+	});
+
+	/**
+	 * @function
+	 * @description Swiper Home Page
+	 */
 	var swiper = new Swiper('.swiper-container', {
 		slidesPerView: 1,
 		pagination: {
@@ -37,3 +59,4 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 });
+

@@ -2,7 +2,7 @@
 
 {% partial 'site/pagination' %}
 
-<div class="columns">
+<div class="columns is-multiline">
     {% for post in posts %}
         {% partial 'blog/post-event' post=post %}
     {% endfor %}

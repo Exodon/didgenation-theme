@@ -1,2 +1,63 @@
-<!-- News Intro -->
-{% partial 'site/header/nav' %}
+<div class="hero-head">
+	<nav class="navbar is-transparent" role="navigation" aria-label="main navigation" data-js="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="{{ 'home'|page }}">
+				<h1 class="title">DidgeNation</h1>
+			</a>
+
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item {% if this.page.id == 'home' %}is-active{% endif %}" href="{{ 'home'|page }}">Home</a>
+				<a class="navbar-item {% if this.page.id == 'about-us' %}is-active{% endif %}" href="{{ 'about-us'|staticPage }}">About Us</a>
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">Articles</a>
+
+					<div class="navbar-dropdown">
+						<a class="navbar-item" href="{{ 'Education/category'|page }}">
+							Education
+						</a>
+						<a class="navbar-item" href="{{ 'Culture/category'|page }}">
+							Culture
+						</a>
+						<a class="navbar-item" href="{{ 'articles-month/category'|page }}">
+							Articles of the Month
+						</a>
+						<hr class="navbar-divider">
+						<a class="navbar-item" href="{{ 'submit-article'|staticPage }}">
+							Submit Article
+						</a>
+					</div>
+				</div>
+				<a class="navbar-item {% if this.page.id == 'instrument-category' %}is-active{% endif %}" href="{{ 'instrument/category'|page }}">ShowRoom</a>
+				<a class="navbar-item {% if this.page.id == 'event-category' %}is-active{% endif %}" href="{{ 'event/category'|page }}">Events</a>
+				<a class="navbar-item {% if this.page.id == 'video-category' %}is-active{% endif %}" href="{{ 'video/category'|page }}">Videos</a>
+				<a class="navbar-item {% if this.page.id == 'music-category' %}is-active{% endif %}" href="{{ 'music/category'|page }}">Music</a>
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons">
+						<a class="button is-primary {% if this.page.id == 'submit-article' %}is-active{% endif %}" href="{{ 'submit-article'|staticPage }}">
+							<strong>Submit Article</strong>
+						</a>
+						<a class="button is-light {% if this.page.id == 'become-hero' %}is-active{% endif %}" href="{{ 'become-hero'|staticPage }}">
+							<span>Become a Hero</span>
+							<span class="icon">
+								<i class="far fa-grin"></i>
+							</span>
+						</a>
+						<a class="button is-light {% if this.page.id == 'faq' %}is-active{% endif %}" href="{{ 'faq'|staticPage }}">FAQ</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>

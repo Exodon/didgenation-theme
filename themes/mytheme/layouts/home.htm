@@ -8,7 +8,7 @@ description = "Home Page Layout"
 	{% partial 'site/meta' %}
 </head>
 
-<body class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
+<body id="{{ this.page.id }}" class="is_{{ this.page.id }}{{ class ? ' ' ~ class }}">
 
 	<!-- Header -->
 	<header class="header">

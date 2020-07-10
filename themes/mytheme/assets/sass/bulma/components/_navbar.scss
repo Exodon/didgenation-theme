@@ -32,7 +32,8 @@ $navbar-dropdown-radius: $radius-large !default;
 $navbar-dropdown-z: 20 !default;
 
 $navbar-dropdown-boxed-radius: $radius-large !default;
-$navbar-dropdown-boxed-shadow: 0 8px 8px bulmaRgba($scheme-invert, 0.1), 0 0 0 1px bulmaRgba($scheme-invert, 0.1) !default;
+$navbar-dropdown-boxed-shadow: 0 8px 8px bulmaRgba($scheme-invert, 0.1),
+0 0 0 1px bulmaRgba($scheme-invert, 0.1) !default;
 
 $navbar-dropdown-item-hover-color: $scheme-invert !default;
 $navbar-dropdown-item-hover-background-color: $background !default;
@@ -59,7 +60,8 @@ $navbar-breakpoint: $desktop !default;
   position: relative;
   z-index: $navbar-z;
 
-  @each $name, $pair in $colors {
+  @each $name,
+  $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
 
@@ -68,13 +70,15 @@ $navbar-breakpoint: $desktop !default;
       color: $color-invert;
 
       .navbar-brand {
-        & > .navbar-item,
+
+        &>.navbar-item,
         .navbar-link {
           color: $color-invert;
         }
 
-        & > a.navbar-item,
+        &>a.navbar-item,
         .navbar-link {
+
           &:focus,
           &:hover,
           &.is-active {
@@ -95,15 +99,18 @@ $navbar-breakpoint: $desktop !default;
       }
 
       @include from($navbar-breakpoint) {
+
         .navbar-start,
         .navbar-end {
-          & > .navbar-item,
+
+          &>.navbar-item,
           .navbar-link {
             color: $color-invert;
           }
 
-          & > a.navbar-item,
+          &>a.navbar-item,
           .navbar-link {
+
             &:focus,
             &:hover,
             &.is-active {
@@ -138,7 +145,7 @@ $navbar-breakpoint: $desktop !default;
     }
   }
 
-  & > .container {
+  &>.container {
     align-items: stretch;
     display: flex;
     min-height: $navbar-height;
@@ -188,6 +195,7 @@ body {
 
 .navbar-brand {
   a.navbar-item {
+
     &:focus,
     &:hover {
       background-color: transparent;
@@ -320,7 +328,7 @@ a.navbar-item,
 }
 
 @include until($navbar-breakpoint) {
-  .navbar > .container {
+  .navbar>.container {
     display: block;
   }
 
@@ -350,6 +358,7 @@ a.navbar-item,
 
   // Fixed navbar
   .navbar {
+
     &.is-fixed-bottom-touch,
     &.is-fixed-top-touch {
       @include navbar-fixed;
@@ -392,6 +401,7 @@ a.navbar-item,
 
 
 @include from($navbar-breakpoint) {
+
   .navbar,
   .navbar-menu,
   .navbar-start,
@@ -418,8 +428,10 @@ a.navbar-item,
     }
 
     &.is-transparent {
+
       a.navbar-item,
       .navbar-link {
+
         &:focus,
         &:hover,
         &.is-active {
@@ -428,6 +440,7 @@ a.navbar-item,
       }
 
       .navbar-item.has-dropdown {
+
         &.is-active,
         &.is-hoverable:focus,
         &.is-hoverable:focus-within,
@@ -440,6 +453,7 @@ a.navbar-item,
 
       .navbar-dropdown {
         a.navbar-item {
+
           &:focus,
           &:hover {
             background-color: $navbar-dropdown-item-hover-background-color;
@@ -575,8 +589,8 @@ a.navbar-item,
     display: block;
   }
 
-  .navbar > .container,
-  .container > .navbar {
+  .navbar>.container,
+  .container>.navbar {
     .navbar-brand {
       margin-left: -0.75rem;
     }
@@ -588,6 +602,7 @@ a.navbar-item,
 
   // Fixed navbar
   .navbar {
+
     &.is-fixed-bottom-desktop,
     &.is-fixed-top-desktop {
       @include navbar-fixed;
@@ -630,6 +645,7 @@ a.navbar-item,
   .navbar-link {
     &.is-active {
       color: $navbar-item-active-color;
+      font-weight: bold;
     }
 
     &.is-active:not(:focus):not(:hover) {
@@ -638,6 +654,7 @@ a.navbar-item,
   }
 
   .navbar-item.has-dropdown {
+
     &:focus,
     &:hover,
     &.is-active {

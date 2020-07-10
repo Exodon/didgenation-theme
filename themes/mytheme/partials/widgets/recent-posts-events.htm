@@ -1,0 +1,17 @@
+[blogPosts events]
+postsPerPage = "5"
+categoryPage = "event/category"
+postPage = "event/post"
+categoryFilter = "event"
+sortOrder = "published_at desc"
+==
+
+<!-- Recent Post Widget Sidebar -->
+<div class="content">
+	<h3 class="title has-text-centered is-size-4">Recent Events</h3>
+	<ul>
+		{% for key, post in events.posts %}
+			<li class="post-{{key}}"><a class="post-title" href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+</div>

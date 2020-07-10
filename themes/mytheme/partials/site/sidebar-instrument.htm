@@ -1,7 +1,17 @@
+[staticMenu mainCategories]
+code = "categories"
+
+[viewBag]
+==
+
 <article class="widget">
-	{% partial 'widgets/music-month' %}
+	{% partial 'widgets/recent-posts-instruments' %}
 </article>
 
 <article class="widget">
-	{% partial 'widgets/music-sidebar' %}
+	<!-- Categories Links -->
+	<div class="content">
+		<h3 class="title has-text-centered is-size-4">Categories</h3>
+		{% component 'mainCategories' %}
+	</div>
 </article>

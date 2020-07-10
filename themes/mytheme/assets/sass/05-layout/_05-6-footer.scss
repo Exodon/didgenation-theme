@@ -7,7 +7,6 @@
 // Standard Header
 // ==================================================
 .footer {
-  margin-top: $global-gutter;
   position: relative;
 }
 
@@ -17,7 +16,11 @@
 
   @include bp($m) {
     margin-bottom: -60px;
-  }
+	}
+
+	svg {
+		display: block;
+	}
 }
 
 .footer-primary {
