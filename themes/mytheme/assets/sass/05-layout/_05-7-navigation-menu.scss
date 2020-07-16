@@ -14,15 +14,21 @@ $nav-height: 3em;
 .hero-head {
   background-color: #f5f5f5;
 
+  &.is-fixed {
+    position: fixed;
+    top: -($nav-height);
+		width: 100%;
+		z-index: 2;
+  }
+
   .navbar {
     background-color: transparent;
     padding: 10px;
 
-    &.is-fixed {
-      position: fixed;
-      top: -($nav-height);
-			background-color: #f5f5f5;
-			width: 100%;
-    }
+    @include bp($m) {
+			max-width: 1344px;
+			margin-left: auto;
+			margin-right: auto;
+		}
   }
 }

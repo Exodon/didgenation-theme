@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	/**
 	 * @function
-	 * @description Swiper Home Page
+	 * @description Sticky Navigation
 	 */
 	var $navbar = $('[data-js="navbar"]'),
 		y_pos = $navbar.offset().top,
