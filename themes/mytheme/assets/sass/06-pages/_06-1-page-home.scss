@@ -130,7 +130,7 @@
 
     .card-content {
       position: absolute;
-      background:rgba(248, 248, 248, 0.9);
+      background: rgba(248, 248, 248, 0.9);
       padding: 40px;
       top: 50%;
       left: 40px;
@@ -166,9 +166,9 @@
 
 .title-holder {
   background: rgba(248, 248, 248, 0.7);
-	margin-bottom: 1rem;
-	border-left: 13px solid $gray;
-	border-radius: 0 50px 0 0;
+  margin-bottom: 1rem;
+  border-left: 13px solid $gray;
+  border-radius: 0 50px 0 0;
 
   .block-music & {
     border-color: $cat-music;
@@ -176,6 +176,10 @@
 
   .is-trending & {
     border-color: $cat-trending;
+  }
+
+  .is-other & {
+    border-color: $cat-other;
   }
 
   .is-month & {
@@ -188,11 +192,11 @@
 
   .is-community & {
     border-color: $cat-community;
-	}
+  }
 
   .is-opinion & {
     border-color: $cat-opinion;
-	}
+  }
 
   .is-about & {
     border-color: $cat-about;
@@ -200,9 +204,9 @@
 }
 
 .is-about {
-	.button {
-		margin-top: 1.5rem;
-	}
+  .button {
+    margin-top: 1.5rem;
+  }
 }
 
 // Title holder for the blocks
@@ -217,4 +221,3 @@
   color: #707070;
   text-align: center;
 }
-

@@ -22,13 +22,23 @@ poll-reference = "poll-home-1"
 		</div>
 	</div>
 </div>
-
-<!-- News Trending -->
-{% partial 'home/home-news-trending' %}
+<div class="columns">
+	<div class="column ">
+	<!-- News Trending -->
+	{% partial 'home/home-news-trending' %}
+	</div>
+	<div class="column is-3">
+		<div class="block-articles is-other">
+			<div class="title-holder">
+				<span class="title-holder-definition">Categories</span>
+			</div>
+			{% partial 'widgets/categories-main' %}
+		</div>
+	</div>
+</div>
 
 <!-- News Intro -->
 {% partial 'home/home-news-intro' %}
-
 
 <!-- News Community -->
 {% partial 'home/home-news-community' %}
