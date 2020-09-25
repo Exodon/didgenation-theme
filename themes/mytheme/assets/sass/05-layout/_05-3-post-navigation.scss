@@ -4,6 +4,21 @@
 // --------------------------------------------------
 
 .block-post-navigation {
-  margin-top: 40px;
-  padding: $global-gutter;
+	padding-top: 15px;
+  border-top: 1px solid rgba($gray, 0.2);
+
+  .arrow-next,
+  .arrow-prev {
+    display: inline-block;
+  }
+
+  .arrow-prev {
+    margin-left: 10px;
+    ;
+  }
+
+  .arrow-next {
+    margin-right: 10px;
+    ;
+  }
 }

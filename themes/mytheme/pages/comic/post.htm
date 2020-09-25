@@ -3,11 +3,18 @@ url = "/comic/:slug"
 layout = "comic"
 description = "Viewing a single Comic Post"
 is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
 
 [blogPost]
 slug = "{{ :slug }}"
 categoryPage = "comic/category"
 
+[nextAndPrev]
+category = 4
+postPage = "blog/post"
 ==
 <?php
 function onEnd()
@@ -74,6 +81,8 @@ function onEnd()
 
 <!-- Next / Previous Post Navigation -->
 <div class="block-post-navigation">
+{% component 'nextAndPrev' %}
+
 	<h3 class="subtitle is-3 has-text-centered">Don´t forget to check other comics post</h3>
 
 	<nav class="pagination is-centered" role="navigation" aria-label="pagination">
