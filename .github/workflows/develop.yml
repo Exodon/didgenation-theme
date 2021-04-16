@@ -1,11 +1,11 @@
 on:
   push: 
     branches:
-      - master
-name: 🚀 Deploy website to Production
+      - develop
+name: 🚀 Deploy website to Develop
 jobs:
   web-deploy:
-    name: 🎉 Production Deploy
+    name: 🎉 Develop Branch
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
@@ -18,4 +18,4 @@ jobs:
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
         local-dir: ./themes/mytheme/
-        server-dir : public_html/portal/themes/mytheme/
+        server-dir : develop.didgenation.com/portal/themes/mytheme/
