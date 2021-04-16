@@ -17,5 +17,5 @@ jobs:
         server: ftp.didgenation.com
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
-        local-dir: ./themes/mytheme
+        local-dir: ./themes/mytheme/
         server-dir 	: staging.didgenation.com/themes/mytheme/
