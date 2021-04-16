@@ -1,0 +1,21 @@
+on:
+  push: 
+    branches:
+      - staging
+name: 🚀 Deploy website to staging
+jobs:
+  web-deploy:
+    name: 🎉 Staging Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: ftp.didgenation.com
+        username: ${{ secrets.username }}
+        password: ${{ secrets.password }}
+        local-dir: ./themes/mytheme
+        server-dir 	: staging.didgenation.com/themes/mytheme/
